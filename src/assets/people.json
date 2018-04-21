@@ -1,0 +1,25 @@
+[{
+        "name": "Ion Popescu",
+        "position": "Engineer",
+        "photo": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.EIsuQy4C8SuV2BSqp0-lhwHaHa%26pid%3D15.1&f=1"
+    },
+    {
+        "name": "With facebook",
+        "position": "I have facebook",
+        "photo": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.QctUT5bAnTV-9B5jEtJMEwHaHa%26pid%3D15.1&f=1",
+        "facebook": "facebook.com"
+    },
+    {
+        "name": "With Twitter",
+        "position": "I have twitter",
+        "photo": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.wxEESh4M_bIzFIrz8-6xCAAAAA%26pid%3D15.1&f=1",
+        "twitter": "twitter.com"
+    },
+    {
+        "name": "Both",
+        "position": "I am social media master",
+        "photo": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.BEgvGSZ8YtDt6-QvcfjgXgHaHa%26pid%3D15.1&f=1",
+        "twitter": "twitter.com",
+        "facebook": "facebook.com"
+    }
+]
