@@ -24,7 +24,17 @@
         "develop": "gatsby develop",
         "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
         "test": "jest",
-        "test-coverage": "jest --coverage"
+        "test-coverage": "jest --coverage",
+        "test-prettier": "CI=true yarn test",
+        "pretty": "prettier-standard --write \"src/**/*.js\"",
+        "precommit": "lint-staged",
+        "prepush": "yarn test-prettier"
+    },
+    "lint-staged": {
+        "*.js": [
+            "yarn pretty",
+            "git add"
+        ]
     },
     "babel": {
         "env": {
@@ -71,8 +81,11 @@
         "babel-plugin-transform-class-properties": "^6.24.1",
         "enzyme": "^3.2.0",
         "enzyme-adapter-react-16": "^1.1.1",
+        "husky": "^0.14.3",
         "jest": "^22.0.3",
+        "lint-staged": "^7.0.4",
         "prettier": "^1.9.2",
+        "prettier-standard": "^8.0.1",
         "prop-types": "^15.6.0",
         "react": "16.0.0",
         "react-dom": "16.0.0",
