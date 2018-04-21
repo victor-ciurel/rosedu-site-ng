@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
 
 import Header from 'components/Header'
+import About from 'components/About'
+
+import people from 'assets/people.json'
 
 import '../index.scss'
 
@@ -9,13 +11,11 @@ import '../index.scss'
  * Homepage page component
  */
 class Home extends Component {
-  static propTypes = {}
-  static defaultProps = {}
-
   render () {
     return (
       <Fragment>
         <Header />
+        <About people={people} />
       </Fragment>
     )
   }
