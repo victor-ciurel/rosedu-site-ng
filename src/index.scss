@@ -91,7 +91,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -105,18 +107,25 @@ nav,
 section {
   display: block;
 }
+
+html,
 body {
+  width: 100%;
+  height: 100%;
   line-height: 1;
   background: linear-gradient(to bottom, #ebedec 0%, #ebedec 50%, #fff 100%);
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -124,10 +133,12 @@ q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 a,
 a:link,
 a:visited {
