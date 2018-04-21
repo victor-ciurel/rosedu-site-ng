@@ -7,6 +7,7 @@ import roseduLogo from './assets/logoWhite.svg'
 import youtube from './assets/youtube.svg'
 import slack from './assets/slack.svg'
 import twitter from './assets/twitter.svg'
+import headerImage from './assets/header.png'
 
 import './index.scss'
 
@@ -41,6 +42,21 @@ class Header extends Component {
           </nav>
           <Button primary>Susține ROSEdu!</Button>
         </header>
+        <main>
+          <div className='text'>
+            <h2>Susținem o educație</h2>
+            <h1>open source</h1>
+
+            <p>
+              ROSEdu este o organizație open source dedicată promovării și
+              dezvoltării software-ului liber. Ut a eros blandit, mattis ligula
+              at, dignissim eros. Cras ut vulputate eros.
+            </p>
+
+            <Button> Vezi proiectele noastre </Button>
+          </div>
+          <img src={headerImage} alt='' />
+        </main>
       </div>
     )
   }
