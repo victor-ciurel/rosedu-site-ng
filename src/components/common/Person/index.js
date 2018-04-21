@@ -5,6 +5,8 @@ import twitterImage from './assets/twitter.svg'
 import facebookImage from './assets/facebook.svg'
 import defaultUser from './assets/default.png'
 
+import './index.scss'
+
 /**
  * Generic Person component with social links
  */
