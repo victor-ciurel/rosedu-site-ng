@@ -1,17 +1,27 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment } from 'react'
+
+import Header from 'components/Header'
+import About from 'components/About'
+import Projects from 'components/Projects'
+import Contact from 'components/Contact'
+
+import people from 'assets/people.json'
+import projects from 'assets/projects.json'
 
 import '../index.scss'
 
+/**
+ * Homepage page component
+ */
 class Home extends Component {
-  static propTypes = {}
-  static defaultProps = {}
-
   render () {
     return (
-      <div>
-        Hello
-      </div>
+      <Fragment>
+        <Header />
+        <About people={people} />
+        <Projects projects={projects} />
+        <Contact />
+      </Fragment>
     )
   }
 }
