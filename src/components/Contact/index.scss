@@ -1,1 +1,9 @@
-.Contact {}
+.Contact {
+  padding: 30px 150px;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
