@@ -1,0 +1,41 @@
+@import 'src/styles/colors.scss';
+
+.Projects {
+  background: linear-gradient(45deg, $deepred 0%, $red 100%);
+  padding: 30px 150px;
+
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 0;
+    color: white;
+
+    p {
+      max-width: 500px;
+      padding: 10px 0;
+    }
+  }
+
+  .list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .Project {
+      margin: 10px;
+    }
+  }
+
+}
