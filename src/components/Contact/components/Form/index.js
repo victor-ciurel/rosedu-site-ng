@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import TextInput from 'components/common/TextInput'
+import Button from 'components/common/Button'
+
 import facebook from './assets/facebook.svg'
 import twitter from './assets/twitter.svg'
 import slack from './assets/slack.svg'
 
 import './index.scss'
+
+const validator = email => {
+  let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return re.test(email)
+}
 
 class Form extends Component {
   static propTypes = {}
@@ -35,6 +43,12 @@ class Form extends Component {
             <img src={slack} />
             #rosedu
           </span>
+        </div>
+        <div className='form'>
+          <TextInput label='Nume' />
+          <TextInput label='E-mail' validator={validator} />
+          <TextInput label='Mesaj' />
+          <Button> Trimite mesaj </Button>
         </div>
       </div>
     )
