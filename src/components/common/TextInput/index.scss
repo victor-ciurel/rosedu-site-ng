@@ -1,0 +1,94 @@
+@import 'src/styles/colors.scss';
+
+.TextInput {
+  display: flex;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+
+  label,
+  .image {
+    position: absolute;
+    font-size: 14px;
+    margin-top: 0;
+    z-index: 1;
+  }
+
+  input {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid rgba(black, 0.3);
+    outline: none;
+    padding-right: 30px;
+  }
+
+  label {
+    font-style: italic;
+    opacity: 0.5;
+    transition: 0.4s all;
+
+    &:after {
+      display: inline-flex;
+      vertical-align: top;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      content: '×';
+
+      $size: 15px;
+
+      width: $size;
+      height: $size;
+      border-radius: $size;
+      font-size: 14px;
+      font-weight: 800;
+
+      color: $red;
+      border: 1px solid $red;
+
+      opacity: 0;
+      margin-left: -#{$size};
+      transition: 0.4s all;
+      transform: scale(0);
+    }
+  }
+
+  &.active label,
+  input:focus+label {
+    opacity: 1;
+    font-style: normal;
+    margin-top: -22px;
+
+
+    @-moz-document url-prefix() {
+      margin-top: -35px;
+    }
+  }
+
+  .image {
+    width: 20px;
+    height: 20px;
+    right: 0;
+  }
+
+  &.error {
+    input:not(:focus)+label {
+      color: $red;
+      font-weight: 800;
+
+      &:after {
+        margin-left: 0;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
