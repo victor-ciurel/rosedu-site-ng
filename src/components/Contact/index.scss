@@ -1,9 +1,28 @@
 .Contact {
   padding: 30px 150px;
 
+  background-color: white;
+
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .Button {
+    margin: 20px 0 0 auto;
+    padding: 15px;
+
+    border-color: #666;
+    color: #666;
+
+    &:before {
+      background-color: #666;
+    }
+
+    &:hover {
+      color: white;
+
+    }
   }
 }

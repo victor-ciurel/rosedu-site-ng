@@ -38,23 +38,6 @@
         width: calc(50% - 5px);
       }
     }
-
-    .Button {
-      margin: 20px 0 0 auto;
-      padding: 15px;
-
-      border-color: #666;
-      color: #666;
-
-      &:before {
-        background-color: #666;
-      }
-
-      &:hover {
-        color: white;
-
-      }
-    }
   }
 
 }
