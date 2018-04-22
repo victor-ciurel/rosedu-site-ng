@@ -1,0 +1,43 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 600px;
+
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 300;
+
+      padding: 15px 0;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .TextInput {
+      width: 100%;
+
+      &:not(:nth-child(3)) {
+        width: calc(50% - 5px);
+      }
+    }
+  }
+
+}
