@@ -5,10 +5,19 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 830px) {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
   header {
     display: flex;
     align-items: center;
     padding: 30px 150px;
+
+    @media screen and (max-width: 1088px) {
+      padding: 30px 10px;
+    }
 
     img {
       height: 40px;
@@ -29,6 +38,10 @@
       padding: 0 10px;
       font-size: 14px;
       position: relative;
+
+      @media screen and (max-width: 830px) {
+        display: none;
+      }
 
       &:after {
         content: '';
@@ -53,6 +66,11 @@
       opacity: 0.5;
       transition: 0.4s all;
 
+
+      @media screen and (max-width: 830px) {
+        display: none;
+      }
+
       &:hover {
         opacity: 1;
         transform: scale(1.1) rotate(360deg);
@@ -66,10 +84,19 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 830px) {
+      flex-direction: column-reverse;
+      padding: 0 10px;
+    }
+
     h1,
     h2 {
       font-size: 60px;
       color: white;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 40px;
+      }
     }
 
     h2 {
@@ -79,21 +106,45 @@
     h1 {
       font-weight: 800;
       font-size: 90px;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 50px;
+      }
     }
 
     p {
       margin: 50px 0;
       color: white;
       max-width: 600px;
+
+      @media screen and (max-width: 1366px) {
+        max-width: 500px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        max-width: 400px;
+      }
     }
 
     .Button {
       margin-right: auto;
       padding: 15px 30px;
+
+
+      @media screen and (max-width: 830px) {
+        margin: 0 auto;
+      }
     }
 
     img {
-      width: 50vw;
+      width: 700px;
+
+      @media screen and (max-width: 1366px) {
+        width: 500px;
+      }
+      @media screen and (max-width: 1200px) {
+        width: 400px;
+      }
     }
   }
 

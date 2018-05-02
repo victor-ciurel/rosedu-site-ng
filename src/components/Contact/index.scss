@@ -3,10 +3,19 @@
 
   background-color: white;
 
+  @media screen and (max-width: 1000px) {
+    padding: 15px;
+  }
+
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 1366px) {
+      flex-direction: column;
+      padding: 30px;
+    }
   }
 
   .Button {
