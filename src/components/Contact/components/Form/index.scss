@@ -4,6 +4,9 @@
 
   max-width: 600px;
 
+  @media screen and (max-width: 1366px) {
+    max-width: none;
+  }
 
   .social {
     display: flex;
