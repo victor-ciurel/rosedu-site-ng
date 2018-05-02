@@ -4,6 +4,10 @@
   background: linear-gradient(45deg, $deepred 0%, $red 100%);
   padding: 30px 150px;
 
+  @media screen and (max-width: 830px) {
+    padding: 30px;
+  }
+
   display: flex;
   flex-direction: column;
 
@@ -11,6 +15,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 1366px) {
+      flex-direction: column;
+    }
   }
 
   .text {
@@ -23,6 +31,10 @@
     p {
       max-width: 500px;
       padding: 10px 0;
+
+      @media screen and (max-width: 1366px) {
+        max-width: none;
+      }
     }
   }
 
