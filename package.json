@@ -5,13 +5,15 @@
     "version": "0.2.0",
     "author": "Bogdan Marius Calapod <bogdan.marius.calapod@outlook.com>",
     "dependencies": {
+        "anchorate": "^1.2.3",
         "gatsby": "^1.9.145",
         "gatsby-link": "^1.6.32",
         "gatsby-plugin-google-analytics": "^1.0.14",
         "gatsby-plugin-hotjar": "^1.0.1",
         "gatsby-plugin-react-helmet": "^1.0.8",
         "gatsby-plugin-sass": "^1.0.15",
-        "react-lazyload": "^2.3.0"
+        "react-lazyload": "^2.3.0",
+        "react-scrollable-anchor": "^0.6.1"
     },
     "keywords": [
         "gatsby",

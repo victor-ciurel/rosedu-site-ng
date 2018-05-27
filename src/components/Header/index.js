@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 import Button from 'components/common/Button'
 
-import roseduLogo from './assets/logoWhite.svg'
-import youtube from './assets/youtube.svg'
-import slack from './assets/slack.svg'
-import twitter from './assets/twitter.svg'
+import facebook from './assets/facebook.png'
 import headerImage from './assets/header.png'
+import roseduLogo from './assets/logoWhite.svg'
+import slack from './assets/slack.svg'
+import mail from './assets/mail.svg'
 
 import './index.scss'
 
@@ -21,23 +21,26 @@ class Header extends Component {
         <header>
           <img src={roseduLogo} alt='' />
           <nav>
-            <a href='/'>
+            <a href='#about'>
               <span>despre noi</span>
             </a>
-            <a href='/'>
+            <a href='#projects'>
               <span>proiecte</span>
             </a>
-            <a href='/'>
+            <a href='#contact'>
               <span>contact</span>
             </a>
-            <a href='/'>
-              <img src={youtube} alt='' />
-            </a>
-            <a href='/'>
-              <img src={twitter} alt='' />
-            </a>
-            <a href='/'>
+            <a href='https://rosedu.herokuapp.com/' target='_blank'>
               <img src={slack} alt='' />
+            </a>
+            <a href='https://www.facebook.com/rosedu.org' target='_blank'>
+              <img src={facebook} alt='' />
+            </a>
+            <a
+              href='http://lists.rosedu.org/listinfo/rosedu-general'
+              target='_blank'
+            >
+              <img src={mail} alt='' />
             </a>
           </nav>
           <Button primary>Susține ROSEdu!</Button>

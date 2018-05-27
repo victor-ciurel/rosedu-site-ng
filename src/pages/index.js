@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 import Header from 'components/Header'
 import About from 'components/About'
@@ -18,9 +19,18 @@ class Home extends Component {
     return (
       <Fragment>
         <Header />
-        <About people={people} />
-        <Projects projects={projects} />
-        <Contact />
+
+        <ScrollableAnchor id={'about'}>
+          <About people={people} />
+        </ScrollableAnchor>
+
+        <ScrollableAnchor id={'projects'}>
+          <Projects projects={projects} />
+        </ScrollableAnchor>
+
+        <ScrollableAnchor id={'contact'}>
+          <Contact />
+        </ScrollableAnchor>
       </Fragment>
     )
   }
