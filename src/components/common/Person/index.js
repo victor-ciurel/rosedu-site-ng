@@ -37,7 +37,7 @@ class Person extends Component {
 
   get socialBlock () {
     const {
-      props: { photo, facebook },
+      props: { facebook },
       getSocialImage
     } = this
 

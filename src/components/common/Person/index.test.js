@@ -36,22 +36,4 @@ describe('Person', () => {
     wrapper.setProps({ facebook: 'test' })
     expect(wrapper.find('.social')).toHaveLength(1)
   })
-
-  it('renders twitter link if passed', () => {
-    const props = {
-      twitter: 'test'
-    }
-    const wrapper = shallow(<Person {...props} />)
-    const url = wrapper.instance().socialBlock.props.children[0].props.href
-    expect(url).toEqual('test')
-  })
-
-  it('renders facebook link if passed', () => {
-    const props = {
-      facebook: 'test'
-    }
-    const wrapper = shallow(<Person {...props} />)
-    const url = wrapper.instance().socialBlock.props.children[1].props.href
-    expect(url).toEqual('test')
-  })
 })

@@ -17,9 +17,4 @@ describe('Project', () => {
     const wrapper = shallow(<Project title='test' />)
     expect(wrapper.text()).toContain('test')
   })
-
-  it('renders passed website', () => {
-    const wrapper = shallow(<Project website='test' />)
-    expect(wrapper.text()).toContain('test')
-  })
 })
