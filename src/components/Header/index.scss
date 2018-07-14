@@ -66,7 +66,6 @@
       opacity: 0.5;
       transition: 0.4s all;
 
-
       @media screen and (max-width: 830px) {
         display: none;
       }
@@ -138,7 +137,7 @@
 
     img {
       width: 700px;
-
+      border-radius: 20px;
       @media screen and (max-width: 1366px) {
         width: 500px;
       }

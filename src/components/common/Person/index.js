@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import twitterImage from './assets/twitter.svg'
 import facebookImage from './assets/facebook.svg'
 import defaultUser from './assets/default.png'
 
@@ -15,15 +14,13 @@ class Person extends Component {
     photo: PropTypes.string,
     name: PropTypes.string,
     position: PropTypes.string,
-    facebook: PropTypes.string,
-    twitter: PropTypes.string
+    facebook: PropTypes.string
   }
   static defaultProps = {
     photo: '',
     name: '',
     position: '',
-    facebook: '',
-    twitter: ''
+    facebook: ''
   }
 
   getSocialImage = ({ url, img }) => {
@@ -32,7 +29,7 @@ class Person extends Component {
     }
 
     return (
-      <a href={url}>
+      <a href={url} target='_blank'>
         <img src={img} alt='' />
       </a>
     )
@@ -40,17 +37,16 @@ class Person extends Component {
 
   get socialBlock () {
     const {
-      props: { twitter, facebook },
+      props: { photo, facebook },
       getSocialImage
     } = this
 
-    if (twitter === '' && facebook === '') {
+    if (facebook === '') {
       return null
     }
 
     return (
       <div className='social'>
-        {getSocialImage({ url: twitter, img: twitterImage })}
         {getSocialImage({ url: facebook, img: facebookImage })}
       </div>
     )

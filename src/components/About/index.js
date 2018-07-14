@@ -27,16 +27,20 @@ class About extends Component {
         <Title text='despre' bolded='noi' color='#ef4924' />
         <div className='content'>
           <div className='text'>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-              consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie consequat, vel illum dolore eu
-              feugiat nulla facilisis at vero eros et accumsan et iusto odio
-              dignissim qui blandit praesent luptatum zzril delenit augue duis
-              dolore te feugait nulla facilisi.
+            <p className='about_text'>
+              ROSEdu crede în importanța educației si a procesului de învățare.
+              Credem că, prin comunicare și colaborare, putem învăța unul de la
+              celălalt sa dezvoltăm lucruri noi și șa contribuim la proiecte
+              existente. Open Source este pentru noi, însuși mediul in care
+              suntem activi, formand o retea de oameni deschisi, proiecte ci
+              activitați lipite impreuna de technologie si internet, ceea ce ne
+              permite cooperarea si schimbul cosntant de idei.
+            </p>
+            <p className='about_text'>
+              Majoritatea membrilor Rosedu sunt in prezent studenti sau
+              absolventi ai Universitatii Politehnica din București, dar noi
+              suntem intotdeauna bucuroși de noi memberi, indfiderent de unde
+              provin. Te asteptam și pe tine!
             </p>
           </div>
           <div className='people'>{this.people}</div>

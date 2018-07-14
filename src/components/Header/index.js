@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import Button from 'components/common/Button'
 
 import facebook from './assets/facebook.png'
-import headerImage from './assets/header.png'
+import headerImage from './assets/logo_principal.jpg'
 import roseduLogo from './assets/logoWhite.svg'
 import slack from './assets/slack.svg'
 import mail from './assets/mail.svg'
@@ -51,14 +50,15 @@ class Header extends Component {
             <h1>open source</h1>
 
             <p>
-              ROSEdu este o organizație open source dedicată promovării și
-              dezvoltării software-ului liber. Ut a eros blandit, mattis ligula
-              at, dignissim eros. Cras ut vulputate eros.
+              ROSEdu este o organizație Open Source bazate pe o comunitate
+              formată din programări și entuziașți de software. Misiunea pentru
+              care suntem foarte dedidacați este aceea de a iniția, sprijinii și
+              dezvolta educația bazată pe valorile Open Source.
             </p>
 
             <Button> Vezi proiectele noastre </Button>
           </div>
-          <img src={headerImage} alt='' />
+          <img className='header_logo' src={headerImage} alt='' />
         </main>
       </div>
     )

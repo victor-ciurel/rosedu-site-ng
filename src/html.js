@@ -49,6 +49,10 @@ module.exports = class HTML extends React.Component {
           />
           <link rel='manifest' href='/site.webmanifest' />
           <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+          <link
+            href='https://fonts.googleapis.com/css?family=Roboto'
+            rel='stylesheet'
+          />
           <meta name='msapplication-TileColor' content='#ffffff' />
           <meta name='theme-color' content='#ef4924' />
 

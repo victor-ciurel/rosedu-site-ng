@@ -20,15 +20,14 @@ class Project extends Component {
 
   render () {
     const {
-      props: { logo, title, website }
+      props: { logo, title, path }
     } = this
 
     return (
-      <a href={website} className='Project'>
+      <a href={path} className='Project'>
         <img src={logo} alt={title} />
         <div className='text'>
           <h1>{title}</h1>
-          <h2>{website}</h2>
         </div>
       </a>
     )

@@ -29,19 +29,21 @@ class Projects extends Component {
 
         <div className='content'>
           <div className='text'>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-              consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie consequat
-            </p>
-            <p>
-              Vel illum dolore eu feugiat nulla facilisis at vero eros et
-              accumsan et iusto odio dignissim qui blandit praesent luptatum
-              zzril delenit augue duis dolore te feugait nulla facilisi.
-            </p>
+            <div className='text_content'>
+              <p>
+                Fiind o comunitate de oameni carora le place sa stie cat mai
+                multe, proiectele noastre acopera multe arii din domeniul IT.
+                Daca doresti sa participi la proiectele noastre te asteptam sa
+                ne contactezi si sa ne cunoastem.
+              </p>
+              <p>
+                In cazul in care ți-ar plăcea mai mult să ajuți la partea
+                organizatorică și ai experiența cu lucruri precum Linux,
+                programare funcțională, programare orientată pe obiecte,
+                proiecte Open Source și ești dornic să o trimiți mai departe, te
+                așteptăm să ne ajuți să îmbunătățim împreună educația.
+              </p>
+            </div>
             <Button> Vrei să te implici ? </Button>
           </div>
           <div className='list'>

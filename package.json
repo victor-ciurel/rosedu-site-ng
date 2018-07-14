@@ -12,6 +12,7 @@
         "gatsby-plugin-hotjar": "^1.0.1",
         "gatsby-plugin-react-helmet": "^1.0.8",
         "gatsby-plugin-sass": "^1.0.15",
+        "react-google-maps": "^9.4.5",
         "react-lazyload": "^2.3.0",
         "react-scrollable-anchor": "^0.6.1"
     },

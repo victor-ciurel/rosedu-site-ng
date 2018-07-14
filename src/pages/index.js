@@ -4,10 +4,11 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import Header from 'components/Header'
 import About from 'components/About'
 import Projects from 'components/Projects'
+import Sponsorship from 'components/Sponsorship'
 import Contact from 'components/Contact'
 
-import people from 'assets/people.json'
-import projects from 'assets/projects.json'
+import people from 'assets/people.js'
+import projects from 'assets/projects/projects.js'
 
 import '../index.scss'
 
@@ -26,6 +27,10 @@ class Home extends Component {
 
         <ScrollableAnchor id={'projects'}>
           <Projects projects={projects} />
+        </ScrollableAnchor>
+
+        <ScrollableAnchor id={'sponsorship'}>
+          <Sponsorship />
         </ScrollableAnchor>
 
         <ScrollableAnchor id={'contact'}>
