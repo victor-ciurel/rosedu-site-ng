@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Title from 'components/common/Title'
-import Button from 'components/common/Button'
+import ButtonLink from 'components/common/ButtonLink'
 
 import './index.scss'
 
@@ -22,19 +22,12 @@ class Sponsorship extends Component {
           </p>
         </div>
         <div className='boxes'>
-          {/* <div className='box'> */}
-          {/* <h2>Formular 2%</h2> */}
-          {/* <p> */}
-          {/* Donează 2% din impozitul tău pentru susținerea organizației */}
-          {/* noastre. Descarcă formularul și depune-l la sediul ANAF de care */}
-          {/* aparții. */}
-          {/* </p> */}
-          {/* <Button>Descarcă formularul</Button> */}
-          {/* </div> */}
           <div className='box'>
             <h2>Voluntariat</h2>
             <p>Vrei să fii un voluntar ROSEdu ?</p>
-            <Button primary={true}>Trimite mesaj</Button>
+            <ButtonLink primary={true} target={'#contact'}>
+              Trimite mesaj
+            </ButtonLink>
           </div>
           <div className='box'>
             <h2>Cont bancar</h2>
@@ -50,7 +43,9 @@ class Sponsorship extends Component {
               Dacă dorești să avem un parteneriat direct de sponsorizare,
               trimite-ne un mesaj!
             </p>
-            <Button primary={true}>Trimite mesaj</Button>
+            <ButtonLink primary={true} target={'#contact'}>
+              Trimite mesaj
+            </ButtonLink>
           </div>
         </div>
       </div>

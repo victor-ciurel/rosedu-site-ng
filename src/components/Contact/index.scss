@@ -1,10 +1,17 @@
 .Contact {
-  padding: 30px 150px;
-
+  padding: 50px 150px;
+  height: 100vh;
   background-color: white;
 
   @media screen and (max-width: 1000px) {
     padding: 15px;
+  }
+
+  .Map {
+    margin-left: 20px;
+    width: 600px;
+    height: 350px;
+    border: 0;
   }
 
   .content {
@@ -31,7 +38,6 @@
 
     &:hover {
       color: white;
-
     }
   }
 }

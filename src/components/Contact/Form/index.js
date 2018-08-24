@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import TextInput from 'components/common/TextInput'
 import Button from 'components/common/Button'
@@ -23,12 +22,17 @@ class Form extends Component {
     return (
       <div className='Form'>
         <p>
-          Vivamus tincidunt quis elit viverra vestibulum. Nullam condimentum
-          pellentesque nulla, et accumsan orci posuere ut. Sed semper, massa in
-          interdum condimentum, urna velit molestie nisl, nec pellentesque
-          mauris lorem at arcu. Phasellus eget nibh quis nunc porttitor varius.
-          Suspendisse potenti. Nulla facilisi. Nam iaculis mi vel velit ornare
-          consectetur.
+          Fiind o comunitate de oameni entuziasmați de tehnologie si programare,
+          sediul nostru se afla in cadrul Facultății de Automatică si
+          Calculatoare, din cadrul Universitati Politehnica București. Aici
+          desfăsurăm și majoritatea proiectelor la care ești binevenit să
+          participi sau să ne ajuti sa le organizam. Pentru a putea lua legatura
+          cu tine, te rugăm să ne trimiți un mesaj, completând formularul de mai
+          jos, urmând ca noi sa luam legatura cu tine in cel mai scurt timp
+          posibil.
+          <br />
+          <br />
+          Abia asteptam sa colaboram impreuma.
         </p>
         <div className='social'>
           <span>

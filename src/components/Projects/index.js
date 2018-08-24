@@ -5,6 +5,7 @@ import './index.scss'
 
 import Title from 'components/common/Title'
 import Button from 'components/common/Button'
+import ButtonLink from 'components/common/ButtonLink'
 import Project from 'components/common/Project'
 
 /**
@@ -44,9 +45,9 @@ class Projects extends Component {
                 așteptăm să ne ajuți să îmbunătățim împreună educația.
               </p>
             </div>
-            <Button> Vrei să te implici ? </Button>
+            <ButtonLink target={'#contact'}>Vrei să te implici ?</ButtonLink>
           </div>
-          <div className='list'>
+          <div className='list' style={{ marginLeft: '70px' }}>
             {projects.map((x, i) => <Project key={i} {...x} />)}
           </div>
         </div>

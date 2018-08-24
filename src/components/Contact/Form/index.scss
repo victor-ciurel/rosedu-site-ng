@@ -1,7 +1,8 @@
 .Form {
   display: flex;
   flex-direction: column;
-
+  margin-top: 60px;
+  margin-right: 120px;
   max-width: 600px;
 
   @media screen and (max-width: 1366px) {
@@ -12,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 
     span {
       display: flex;

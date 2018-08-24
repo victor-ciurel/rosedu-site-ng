@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Button from 'components/common/Button'
+import ButtonLink from 'components/common/ButtonLink'
 
 import facebook from './assets/facebook.png'
 import headerImage from './assets/logo_principal.jpg'
@@ -42,7 +42,9 @@ class Header extends Component {
               <img src={mail} alt='' />
             </a>
           </nav>
-          <Button primary>Susține ROSEdu!</Button>
+          <ButtonLink primary target={'#sponsorship'}>
+            Susține ROSEdu!
+          </ButtonLink>
         </header>
         <main>
           <div className='text'>
@@ -56,7 +58,10 @@ class Header extends Component {
               dezvolta educația bazată pe valorile Open Source.
             </p>
 
-            <Button> Vezi proiectele noastre </Button>
+            <ButtonLink target={'#projects'}>
+              {' '}
+              Vezi proiectele noastre{' '}
+            </ButtonLink>
           </div>
           <img className='header_logo' src={headerImage} alt='' />
         </main>
