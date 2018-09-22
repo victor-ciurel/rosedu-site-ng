@@ -93,10 +93,9 @@ class TextInput extends Component {
   render () {
     const { label, type } = this.props
     const { value } = this.state
-
     return (
       <div className={this.className}>
-        <input type={type} value={value} onChange={this.onChange} />
+        <input type={type} value={value} onChange={this.props.onChange} />
         <label> {label} </label>
         {this.image}
       </div>

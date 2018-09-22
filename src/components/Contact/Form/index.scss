@@ -45,4 +45,29 @@
     }
   }
 
+  .message_sent {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 2em;
+    color: #23a94b;
+  }
+
+  .message_sent_details {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #23a94b;
+  }
+
+  .message_error {
+    margin-left: 5em;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #c0272d;
+  }
+  .message_error_details {
+    margin-left: 7em;
+    font-size: 1em;
+    color: #c0272d;
+  }
 }
