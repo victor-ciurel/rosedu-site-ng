@@ -27,18 +27,18 @@ webpackJsonp([35783957827783], {
             return window.scrollY || window.pageYOffset
           }
           function o (e) {
-            return e.getBoundingClientRect().top + s
+            return e.getBoundingClientRect().top + c
           }
           function r (e) {
             d || (d = e),
             (j = e - d),
-            (w = f(j, s, L, p)),
+            (w = M(j, c, L, p)),
             window.scrollTo(0, w),
             j < p ? requestAnimationFrame(r) : a()
           }
           function a () {
-            window.scrollTo(0, s + L),
-            i && M && (i.setAttribute('tabindex', '-1'), i.focus()),
+            window.scrollTo(0, c + L),
+            i && f && (i.setAttribute('tabindex', '-1'), i.focus()),
             typeof y === 'function' && y(),
             (d = !1)
           }
@@ -51,21 +51,21 @@ webpackJsonp([35783957827783], {
               ((p = u.duration || 1e3),
               (l = u.offset || 0),
               (y = u.callback),
-              (f = u.easing || e),
-              (M = u.a11y || !1),
-              (s = n()),
+              (M = u.easing || e),
+              (f = u.a11y || !1),
+              (c = n()),
               typeof a === 'undefined' ? 'undefined' : t(a))
             ) {
               case 'number':
-                ;(i = void 0), (M = !1), (c = s + a)
+                ;(i = void 0), (f = !1), (s = c + a)
                 break
               case 'object':
-                ;(i = a), (c = o(i))
+                ;(i = a), (s = o(i))
                 break
               case 'string':
-                ;(i = document.querySelector(a)), (c = o(i))
+                ;(i = document.querySelector(a)), (s = o(i))
             }
-            switch (((L = c - s + l), t(u.duration))) {
+            switch (((L = s - c + l), t(u.duration))) {
               case 'number':
                 p = u.duration
                 break
@@ -75,11 +75,11 @@ webpackJsonp([35783957827783], {
             requestAnimationFrame(r)
           }
           var i = void 0,
-            s = void 0,
             c = void 0,
+            s = void 0,
             l = void 0,
-            f = void 0,
             M = void 0,
+            f = void 0,
             L = void 0,
             p = void 0,
             d = void 0,
@@ -129,15 +129,15 @@ webpackJsonp([35783957827783], {
     e.exports = o()
       ? Object.assign
       : function (e, t) {
-        for (var o, i, s = n(e), c = 1; c < arguments.length; c++) {
-          o = Object(arguments[c])
-          for (var l in o) a.call(o, l) && (s[l] = o[l])
+        for (var o, i, c = n(e), s = 1; s < arguments.length; s++) {
+          o = Object(arguments[s])
+          for (var l in o) a.call(o, l) && (c[l] = o[l])
           if (r) {
             i = r(o)
-            for (var f = 0; f < i.length; f++) { u.call(o, i[f]) && (s[i[f]] = o[i[f]]) }
+            for (var M = 0; M < i.length; M++) { u.call(o, i[M]) && (c[i[M]] = o[i[M]]) }
           }
         }
-        return s
+        return c
       }
   },
   113: function (e, t, n) {
@@ -160,11 +160,11 @@ webpackJsonp([35783957827783], {
         },
       u = n(230),
       i = o(u),
-      s = n(268),
-      c = n(269),
+      c = n(268),
+      s = n(269),
       l = n(114),
-      f = { offset: 0, scrollDuration: 400, keepLastAnchorHash: !1 },
-      M = function e () {
+      M = { offset: 0, scrollDuration: 400, keepLastAnchorHash: !1 },
+      f = function e () {
         var t = this
         r(this, e),
         (this.addListeners = function () {
@@ -176,10 +176,10 @@ webpackJsonp([35783957827783], {
           window.removeEventListener('hashchange', t.handleHashChange)
         }),
         (this.configure = function (e) {
-          t.config = a({}, f, e)
+          t.config = a({}, M, e)
         }),
         (this.goToTop = function () {
-          (0, c.getScrollTop)() !== 0 &&
+          (0, s.getScrollTop)() !== 0 &&
               ((t.forcedHash = !0), window.scroll(0, 0))
         }),
         (this.addAnchor = function (e, n) {
@@ -195,7 +195,7 @@ webpackJsonp([35783957827783], {
           var e = t.config,
             n = e.offset,
             o = e.keepLastAnchorHash,
-            r = (0, c.getBestAnchorGivenScrollLocation)(t.anchors, n)
+            r = (0, s.getBestAnchorGivenScrollLocation)(t.anchors, n)
           r && (0, l.getHash)() !== r
             ? ((t.forcedHash = !0), (0, l.updateHash)(r, !1))
             : r || o || (0, l.removeHash)()
@@ -216,11 +216,11 @@ webpackJsonp([35783957827783], {
         }),
         (this.anchors = {}),
         (this.forcedHash = !1),
-        (this.config = f),
-        (this.scrollHandler = (0, s.debounce)(this.handleScroll, 100)),
-        (this.forceHashUpdate = (0, s.debounce)(this.handleHashChange, 1))
+        (this.config = M),
+        (this.scrollHandler = (0, c.debounce)(this.handleScroll, 100)),
+        (this.forceHashUpdate = (0, c.debounce)(this.handleHashChange, 1))
       }
-    t.default = new M()
+    t.default = new f()
   },
   266: function (e, t, n) {
     'use strict'
@@ -271,12 +271,12 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(70),
-      f = o(l),
-      M = n(2),
-      L = o(M),
+      M = o(l),
+      f = n(2),
+      L = o(f),
       p = n(113),
       d = o(p),
       j = (function (e) {
@@ -294,7 +294,7 @@ webpackJsonp([35783957827783], {
             {
               key: 'componentDidMount',
               value: function () {
-                var e = f.default.findDOMNode(
+                var e = M.default.findDOMNode(
                   this.refs[Object.keys(this.refs)[0]]
                 )
                 d.default.addAnchor(this.id, e)
@@ -312,13 +312,13 @@ webpackJsonp([35783957827783], {
                 var e = this.props,
                   t = e.children,
                   n = e.id
-                return c.default.cloneElement(t, { ref: t.ref || n })
+                return s.default.cloneElement(t, { ref: t.ref || n })
               }
             }
           ]),
           t
         )
-      })(s.Component)
+      })(c.Component)
     ;(j.propTypes = { children: L.default.node, id: L.default.string }),
     (t.default = j)
   },
@@ -365,8 +365,8 @@ webpackJsonp([35783957827783], {
           i = function () {
             ;(r = null), o || e.apply(a, u)
           },
-          s = o && !r
-        clearTimeout(r), (r = setTimeout(i, t)), s && e.apply(a, u)
+          c = o && !r
+        clearTimeout(r), (r = setTimeout(i, t)), c && e.apply(a, u)
       }
     }
   },
@@ -413,8 +413,8 @@ webpackJsonp([35783957827783], {
           a = n.bottom,
           u = o(t),
           i = u.top,
-          s = u.bottom
-        return r === i ? (a === s ? e < t : s < a) : i > r
+          c = u.bottom
+        return r === i ? (a === c ? e < t : c < a) : i > r
       }),
       u = (t.checkElementRelevance = function (e, t) {
         return !!e.contains(t) || !(t.contains(e) || !a(e, t))
@@ -447,11 +447,11 @@ webpackJsonp([35783957827783], {
       a = o(r),
       u = n(283),
       i = o(u),
-      s = n(284),
-      c = o(s),
+      c = n(284),
+      s = o(c),
       l = n(275),
-      f = o(l),
-      M = [
+      M = o(l),
+      f = [
         {
           name: 'Răzvan Deaconescu',
           position: 'Co-founder',
@@ -462,7 +462,7 @@ webpackJsonp([35783957827783], {
           name: 'Răzvan Rughiniș',
           position: 'Co-founder',
           facebook: 'https://www.facebook.com/razvan.rughinis',
-          photo: c.default
+          photo: s.default
         },
         {
           name: 'Mircea Bardac',
@@ -474,10 +474,10 @@ webpackJsonp([35783957827783], {
           name: 'George Milescu',
           position: 'Co-founder',
           facebook: 'https://www.facebook.com/gmilescu',
-          photo: f.default
+          photo: M.default
         }
       ]
-    ;(t.default = M), (e.exports = t.default)
+    ;(t.default = f), (e.exports = t.default)
   },
   277: function (e, t, n) {
     e.exports = n.p + 'static/cdl_logo.1dff96f6.png'
@@ -499,19 +499,19 @@ webpackJsonp([35783957827783], {
       a = o(r),
       u = n(279),
       i = o(u),
-      s = n(281),
-      c = o(s),
+      c = n(281),
+      s = o(c),
       l = n(282),
-      f = o(l),
-      M = n(280),
-      L = o(M),
+      M = o(l),
+      f = n(280),
+      L = o(f),
       p = n(278),
       d = o(p),
       j = [
         { title: '', logo: i.default, path: 'http://www.lpic.ro/wiki/' },
         { title: '', logo: a.default, path: 'http://cdl.rosedu.org/' },
-        { title: '', logo: c.default, path: 'http://soc.rosedu.org/2018/' },
-        { title: '', logo: f.default, path: 'https://github.com/rosedu/wouso' },
+        { title: '', logo: s.default, path: 'http://soc.rosedu.org/2018/' },
+        { title: '', logo: M.default, path: 'https://github.com/rosedu/wouso' },
         {
           title: '',
           logo: L.default,
@@ -580,7 +580,7 @@ webpackJsonp([35783957827783], {
           }
           return e
         },
-      s = (function () {
+      c = (function () {
         function e (e, t) {
           for (var n = 0; n < t.length; n++) {
             var o = t[n]
@@ -594,10 +594,10 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      c = n(1),
-      l = o(c),
-      f = n(2),
-      M = o(f),
+      s = n(1),
+      l = o(s),
+      M = n(2),
+      f = o(M),
       L = n(26),
       p = o(L),
       d = n(129),
@@ -643,7 +643,7 @@ webpackJsonp([35783957827783], {
             )
           )
         }),
-        s(t, [
+        c(t, [
           {
             key: 'people',
             get: function () {
@@ -655,8 +655,8 @@ webpackJsonp([35783957827783], {
         ]),
         t
       )
-    })(c.Component)
-    ;(w.propTypes = { people: M.default.arrayOf(M.default.object) }),
+    })(s.Component)
+    ;(w.propTypes = { people: f.default.arrayOf(f.default.object) }),
     (w.defaultProps = { people: [] }),
     (t.default = w),
     (e.exports = t.default)
@@ -710,11 +710,11 @@ webpackJsonp([35783957827783], {
     }
     t.__esModule = !0
     var i = n(1),
-      s = o(i),
-      c = n(131),
-      l = o(c),
-      f = n(77),
-      M = o(f),
+      c = o(i),
+      s = n(131),
+      l = o(s),
+      M = n(77),
+      f = o(M),
       L = n(285),
       p = o(L),
       d = n(287),
@@ -722,55 +722,22 @@ webpackJsonp([35783957827783], {
       w = n(286),
       y = o(w)
     n(233)
-    var m = n(2),
-      N = (o(m),
+    var N = n(2),
+      m = (o(N),
       function (e) {
         var t = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         return t.test(e)
       }),
-      h = function (e) {
-        return e !== ''
-      },
-      g = (function (e) {
+      h = (function (e) {
         function t () {
           var n, o, u
           r(this, t)
-          for (var i = arguments.length, s = Array(i), c = 0; c < i; c++) { s[c] = arguments[c] }
+          for (var i = arguments.length, c = Array(i), s = 0; s < i; s++) { c[s] = arguments[s] }
           return (
-            (n = o = a(this, e.call.apply(e, [this].concat(s)))),
-            (o.state = {
-              name: '',
-              email: '',
-              message: '',
-              messageSent: !1,
-              messageError: !1
-            }),
+            (n = o = a(this, e.call.apply(e, [this].concat(c)))),
+            (o.state = { name: '', email: '', message: '' }),
             (o.postMessageHandler = function () {
-              if (h(o.state.name) && h(o.state.message) && N(o.state.email)) {
-                var e = {
-                    'entry.649419642': o.state.name,
-                    'entry.2000347351': o.state.email,
-                    'entry.792207788': o.state.message
-                  },
-                  t = []
-                for (var n in e) { t.push(encodeURIComponent(n) + '=' + encodeURIComponent(e[n])) }
-                var r = t.join('&').replace(/%20/g, '+'),
-                  a =
-                    'https://docs.google.com/forms/u/2/d/e/1FAIpQLSe0M5G-sZuRrAPbNbjKla--6DT-nFPjt5SCWYO5__oiXK4HKA/formResponse'
-                return fetch(a, {
-                  method: 'POST',
-                  mode: 'no-cors',
-                  headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                  },
-                  body: r
-                }).then(function (e) {
-                  return o.setState({
-                    messageSent: e.status === 0,
-                    messageError: e.status !== 0
-                  })
-                })
-              }
+              console.log('Merge?'), console.log(o)
             }),
             (o.onChangeName = function (e) {
               var t = e.target.value
@@ -792,75 +759,58 @@ webpackJsonp([35783957827783], {
           u(t, e),
           (t.prototype.render = function () {
             var e
-            return s.default.createElement(
-              'div',
-              { className: 'Form' },
-              s.default.createElement(
-                'p',
-                null,
-                'Fiind o comunitate de oameni entuziasmați de tehnologie si programare, sediul nostru se afla in cadrul Facultății de Automatică si Calculatoare, din cadrul Universității Politehnica București. Aici desfăsurăm și majoritatea proiectelor la care ești binevenit să participi sau să ne ajuti sa le organizam. Pentru a putea lua legatura cu tine, te rugăm să ne trimiți un mesaj, completând formularul de mai jos, urmând ca noi sa luam legatura cu tine in cel mai scurt timp posibil.',
-                s.default.createElement('br', null),
-                s.default.createElement('br', null),
-                'Abia asteptam sa colaboram impreuma.'
-              ),
-              s.default.createElement(
+            return (
+              console.log(this.state),
+              c.default.createElement(
                 'div',
-                { className: 'social' },
-                s.default.createElement(
-                  'span',
+                { className: 'Form' },
+                c.default.createElement(
+                  'p',
                   null,
-                  s.default.createElement('img', { src: j.default }),
-                  '@rosedu'
+                  'Fiind o comunitate de oameni entuziasmați de tehnologie si programare, sediul nostru se afla in cadrul Facultății de Automatică si Calculatoare, din cadrul Universitati Politehnica București. Aici desfăsurăm și majoritatea proiectelor la care ești binevenit să participi sau să ne ajuti sa le organizam. Pentru a putea lua legatura cu tine, te rugăm să ne trimiți un mesaj, completând formularul de mai jos, urmând ca noi sa luam legatura cu tine in cel mai scurt timp posibil.',
+                  c.default.createElement('br', null),
+                  c.default.createElement('br', null),
+                  'Abia asteptam sa colaboram impreuma.'
                 ),
-                s.default.createElement(
-                  'span',
-                  null,
-                  s.default.createElement('img', {
-                    src: p.default
-                  }),
-                  '/rosedu'
-                ),
-                s.default.createElement(
-                  'span',
-                  null,
-                  s.default.createElement('img', { src: y.default }),
-                  '#rosedu'
-                )
-              ),
-              this.state.messageSent
-                ? s.default.createElement(
+                c.default.createElement(
                   'div',
-                  null,
-                  s.default.createElement(
-                    'div',
-                    { className: 'message_sent' },
-                    'Mesajul a fost trimis!'
+                  { className: 'social' },
+                  c.default.createElement(
+                    'span',
+                    null,
+                    c.default.createElement('img', { src: j.default }),
+                    '@rosedu'
                   ),
-                  s.default.createElement('br', null),
-                  s.default.createElement(
-                    'div',
-                    { className: 'message_sent_details' },
-                    'Vom raspunde in cel mai scurt timp posibil.',
-                    ' '
+                  c.default.createElement(
+                    'span',
+                    null,
+                    c.default.createElement('img', { src: p.default }),
+                    '/rosedu'
+                  ),
+                  c.default.createElement(
+                    'span',
+                    null,
+                    c.default.createElement('img', { src: y.default }),
+                    '#rosedu'
                   )
-                )
-                : s.default.createElement(
+                ),
+                c.default.createElement(
                   'div',
                   { className: 'form' },
-                  s.default.createElement(l.default, {
+                  c.default.createElement(l.default, {
                     id: 'name_input',
                     label: 'Nume',
                     value: this.state.name,
                     onChange: this.onChangeName
                   }),
-                  s.default.createElement(l.default, {
+                  c.default.createElement(l.default, {
                     id: 'email_input',
                     label: 'E-mail',
-                    validator: N,
+                    validator: m,
                     value: this.state.email,
                     onChange: this.onChangeEmail
                   }),
-                  s.default.createElement(
+                  c.default.createElement(
                     l.default,
                     ((e = {
                       id: 'mesaj_input',
@@ -871,35 +821,19 @@ webpackJsonp([35783957827783], {
                     (e.onChange = this.onChangeMessage),
                     e)
                   ),
-                  this.state.messageSent === !1 &&
-                    this.state.messageError === !0
-                    ? s.default.createElement(
-                      'div',
-                      null,
-                      s.default.createElement(
-                        'div',
-                        { className: 'message_error' },
-                        'Ne pare rau dar mesajul nu a putut fi primit.'
-                      ),
-                      s.default.createElement(
-                        'div',
-                        { className: 'message_error_details' },
-                        'Incercati din nou in scurt timp.'
-                      )
-                    )
-                    : null,
-                  s.default.createElement(
-                    M.default,
+                  c.default.createElement(
+                    f.default,
                     { onClick: this.postMessageHandler },
                     ' Trimite mesaj '
                   )
                 )
+              )
             )
           }),
           t
         )
       })(i.Component)
-    ;(g.propTypes = {}), (t.default = g), (e.exports = t.default)
+    ;(h.propTypes = {}), (t.default = h), (e.exports = t.default)
   },
   233: function (e, t) {},
   125: function (e, t, n) {
@@ -938,11 +872,11 @@ webpackJsonp([35783957827783], {
     }
     t.__esModule = !0
     var i = n(1),
-      s = o(i),
-      c = n(26),
-      l = o(c),
-      f = n(124),
-      M = o(f)
+      c = o(i),
+      s = n(26),
+      l = o(s),
+      M = n(124),
+      f = o(M)
     n(234)
     var L = (function (e) {
       function t () {
@@ -951,18 +885,18 @@ webpackJsonp([35783957827783], {
       return (
         u(t, e),
         (t.prototype.render = function () {
-          return s.default.createElement(
+          return c.default.createElement(
             'div',
             { className: 'Contact' },
-            s.default.createElement(l.default, {
+            c.default.createElement(l.default, {
               text: 'contact',
               color: '#23a94b'
             }),
-            s.default.createElement(
+            c.default.createElement(
               'div',
               { className: 'content' },
-              s.default.createElement(M.default, null),
-              s.default.createElement('iframe', {
+              c.default.createElement(f.default, null),
+              c.default.createElement('iframe', {
                 className: 'Map',
                 src:
                   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.874500050432!2d26.045563415467942!3d44.43573650949407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201ebafcdf7a3%3A0xeafb513bd76c5277!2sComputer+Science+College!5e0!3m2!1sen!2sro!4v1535121641646'
@@ -1032,19 +966,19 @@ webpackJsonp([35783957827783], {
     }
     t.__esModule = !0
     var i = n(1),
-      s = o(i),
-      c = n(41),
-      l = o(c),
-      f = n(288),
-      M = o(f),
+      c = o(i),
+      s = n(41),
+      l = o(s),
+      M = n(288),
+      f = o(M),
       L = n(290),
       p = o(L),
       d = n(289),
       j = o(d),
       w = n(292),
       y = o(w),
-      m = n(291),
-      N = o(m)
+      N = n(291),
+      m = o(N)
     n(235)
     var h = (function (e) {
       function t () {
@@ -1053,73 +987,73 @@ webpackJsonp([35783957827783], {
       return (
         u(t, e),
         (t.prototype.render = function () {
-          return s.default.createElement(
+          return c.default.createElement(
             'div',
             { className: 'Header' },
-            s.default.createElement(
+            c.default.createElement(
               'header',
               null,
-              s.default.createElement('img', { src: j.default, alt: '' }),
-              s.default.createElement(
+              c.default.createElement('img', { src: j.default, alt: '' }),
+              c.default.createElement(
                 'nav',
                 null,
-                s.default.createElement(
+                c.default.createElement(
                   'a',
                   { href: '#about' },
-                  s.default.createElement('span', null, 'despre noi')
+                  c.default.createElement('span', null, 'despre noi')
                 ),
-                s.default.createElement(
+                c.default.createElement(
                   'a',
                   { href: '#projects' },
-                  s.default.createElement('span', null, 'proiecte')
+                  c.default.createElement('span', null, 'proiecte')
                 ),
-                s.default.createElement(
+                c.default.createElement(
                   'a',
                   { href: '#contact' },
-                  s.default.createElement('span', null, 'contact')
+                  c.default.createElement('span', null, 'contact')
                 ),
-                s.default.createElement(
+                c.default.createElement(
                   'a',
                   { href: 'https://rosedu.herokuapp.com/', target: '_blank' },
-                  s.default.createElement('img', { src: y.default, alt: '' })
+                  c.default.createElement('img', { src: y.default, alt: '' })
                 ),
-                s.default.createElement(
+                c.default.createElement(
                   'a',
                   {
                     href: 'https://www.facebook.com/rosedu.org',
                     target: '_blank'
                   },
-                  s.default.createElement('img', { src: M.default, alt: '' })
+                  c.default.createElement('img', { src: f.default, alt: '' })
                 ),
-                s.default.createElement(
+                c.default.createElement(
                   'a',
                   {
                     href: 'http://lists.rosedu.org/listinfo/rosedu-general',
                     target: '_blank'
                   },
-                  s.default.createElement('img', { src: N.default, alt: '' })
+                  c.default.createElement('img', { src: m.default, alt: '' })
                 )
               ),
-              s.default.createElement(
+              c.default.createElement(
                 l.default,
                 { primary: !0, target: '#sponsorship' },
                 'Susține ROSEdu!'
               )
             ),
-            s.default.createElement(
+            c.default.createElement(
               'main',
               null,
-              s.default.createElement(
+              c.default.createElement(
                 'div',
                 { className: 'text' },
-                s.default.createElement('h2', null, 'Susținem o educație'),
-                s.default.createElement('h1', null, 'open source'),
-                s.default.createElement(
+                c.default.createElement('h2', null, 'Susținem o educație'),
+                c.default.createElement('h1', null, 'open source'),
+                c.default.createElement(
                   'p',
                   null,
                   'ROSEdu este o organizație Open Source bazate pe o comunitate formată din programări și entuziașți de software. Misiunea pentru care suntem foarte dedidacați este aceea de a iniția, sprijinii și dezvolta educația bazată pe valorile Open Source.'
                 ),
-                s.default.createElement(
+                c.default.createElement(
                   l.default,
                   { target: '#projects' },
                   ' ',
@@ -1127,7 +1061,7 @@ webpackJsonp([35783957827783], {
                   ' '
                 )
               ),
-              s.default.createElement('img', {
+              c.default.createElement('img', {
                 className: 'header_logo',
                 src: p.default,
                 alt: ''
@@ -1188,19 +1122,19 @@ webpackJsonp([35783957827783], {
           }
           return e
         },
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(2),
-      f = o(l)
+      M = o(l)
     n(236)
-    var M = n(26),
-      L = o(M),
+    var f = n(26),
+      L = o(f),
       p = n(77),
       d = (o(p), n(41)),
       j = o(d),
       w = n(130),
       y = o(w),
-      m = (function (e) {
+      N = (function (e) {
         function t () {
           return r(this, t), a(this, e.apply(this, arguments))
         }
@@ -1208,44 +1142,44 @@ webpackJsonp([35783957827783], {
           u(t, e),
           (t.prototype.render = function () {
             var e = this.props.projects
-            return c.default.createElement(
+            return s.default.createElement(
               'div',
               { className: 'Projects' },
-              c.default.createElement(L.default, {
+              s.default.createElement(L.default, {
                 text: 'proiecte',
                 color: '#fff'
               }),
-              c.default.createElement(
+              s.default.createElement(
                 'div',
                 { className: 'content' },
-                c.default.createElement(
+                s.default.createElement(
                   'div',
                   { className: 'text' },
-                  c.default.createElement(
+                  s.default.createElement(
                     'div',
                     { className: 'text_content' },
-                    c.default.createElement(
+                    s.default.createElement(
                       'p',
                       null,
                       'Fiind o comunitate de oameni carora le place sa stie cat mai multe, proiectele noastre acopera multe arii din domeniul IT. Daca doresti sa participi la proiectele noastre te asteptam sa ne contactezi si sa ne cunoastem.'
                     ),
-                    c.default.createElement(
+                    s.default.createElement(
                       'p',
                       null,
                       'In cazul in care ți-ar plăcea mai mult să ajuți la partea organizatorică și ai experiența cu lucruri precum Linux, programare funcțională, programare orientată pe obiecte, proiecte Open Source și ești dornic să o trimiți mai departe, te așteptăm să ne ajuți să îmbunătățim împreună educația.'
                     )
                   ),
-                  c.default.createElement(
+                  s.default.createElement(
                     j.default,
                     { target: '#contact' },
                     'Vrei să te implici ?'
                   )
                 ),
-                c.default.createElement(
+                s.default.createElement(
                   'div',
                   { className: 'list', style: { marginLeft: '70px' } },
                   e.map(function (e, t) {
-                    return c.default.createElement(y.default, i({ key: t }, e))
+                    return s.default.createElement(y.default, i({ key: t }, e))
                   })
                 )
               )
@@ -1253,10 +1187,10 @@ webpackJsonp([35783957827783], {
           }),
           t
         )
-      })(s.Component)
-    ;(m.propTypes = { projects: f.default.arrayOf(f.default.object) }),
-    (m.defaultProps = { projects: [] }),
-    (t.default = m),
+      })(c.Component)
+    ;(N.propTypes = { projects: M.default.arrayOf(M.default.object) }),
+    (N.defaultProps = { projects: [] }),
+    (t.default = N),
     (e.exports = t.default)
   },
   236: function (e, t) {},
@@ -1296,11 +1230,11 @@ webpackJsonp([35783957827783], {
     }
     t.__esModule = !0
     var i = n(1),
-      s = o(i),
-      c = n(26),
-      l = o(c),
-      f = n(41),
-      M = o(f)
+      c = o(i),
+      s = n(26),
+      l = o(s),
+      M = n(41),
+      f = o(M)
     n(237)
     var L = (function (e) {
       function t () {
@@ -1309,62 +1243,62 @@ webpackJsonp([35783957827783], {
       return (
         u(t, e),
         (t.prototype.render = function () {
-          return s.default.createElement(
+          return c.default.createElement(
             'div',
             { className: 'Sponsorship' },
-            s.default.createElement(l.default, {
+            c.default.createElement(l.default, {
               text: 'Susține ROSEdu',
               color: 'white'
             }),
-            s.default.createElement(
+            c.default.createElement(
               'div',
               { className: 'content' },
-              s.default.createElement(
+              c.default.createElement(
                 'p',
                 { className: 'content_text' },
                 'Dacă dorești să susții activitățile organizației ROSEdu, avem aici mai multe variante prin care poți face asta. Daca ai nevoie de ajutor, sau ești interesat de un parteneriat, folosește formularul de contact și hai să ne auzim!'
               )
             ),
-            s.default.createElement(
+            c.default.createElement(
               'div',
               { className: 'boxes' },
-              s.default.createElement(
+              c.default.createElement(
                 'div',
                 { className: 'box' },
-                s.default.createElement('h2', null, 'Voluntariat'),
-                s.default.createElement(
+                c.default.createElement('h2', null, 'Voluntariat'),
+                c.default.createElement(
                   'p',
                   null,
                   'Vrei să fii un voluntar ROSEdu ?'
                 ),
-                s.default.createElement(
-                  M.default,
+                c.default.createElement(
+                  f.default,
                   { primary: !0, target: '#contact' },
                   'Trimite mesaj'
                 )
               ),
-              s.default.createElement(
+              c.default.createElement(
                 'div',
                 { className: 'box' },
-                s.default.createElement('h2', null, 'Cont bancar'),
-                s.default.createElement(
+                c.default.createElement('h2', null, 'Cont bancar'),
+                c.default.createElement(
                   'p',
                   null,
                   'Ne poți susține și prin donarea unei sume de bani la următorul cont:'
                 ),
-                s.default.createElement('h3', null, 'RO99INGB12345678')
+                c.default.createElement('h3', null, 'RO99INGB12345678')
               ),
-              s.default.createElement(
+              c.default.createElement(
                 'div',
                 { className: 'box' },
-                s.default.createElement('h2', null, 'Sponsorizare'),
-                s.default.createElement(
+                c.default.createElement('h2', null, 'Sponsorizare'),
+                c.default.createElement(
                   'p',
                   null,
                   'Dacă dorești să avem un parteneriat direct de sponsorizare, trimite-ne un mesaj!'
                 ),
-                s.default.createElement(
-                  M.default,
+                c.default.createElement(
+                  f.default,
                   { primary: !0, target: '#contact' },
                   'Trimite mesaj'
                 )
@@ -1430,12 +1364,12 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(2),
-      f = o(l)
+      M = o(l)
     n(238)
-    var M = (function (e) {
+    var f = (function (e) {
       function t () {
         return r(this, t), a(this, e.apply(this, arguments))
       }
@@ -1445,7 +1379,7 @@ webpackJsonp([35783957827783], {
           var e = this.props,
             t = e.children,
             n = e.onClick
-          return c.default.createElement(
+          return s.default.createElement(
             'button',
             { className: this.className, onClick: n },
             t
@@ -1465,18 +1399,18 @@ webpackJsonp([35783957827783], {
         ]),
         t
       )
-    })(s.Component)
-    ;(M.propTypes = {
-      primary: f.default.bool,
-      secondary: f.default.bool,
-      onClick: f.default.func
+    })(c.Component)
+    ;(f.propTypes = {
+      primary: M.default.bool,
+      secondary: M.default.bool,
+      onClick: M.default.func
     }),
-    (M.defaultProps = {
+    (f.defaultProps = {
       primary: !1,
       secondary: !0,
-      onClick: f.default.func
+      onClick: M.default.func
     }),
-    (t.default = M),
+    (t.default = f),
     (e.exports = t.default)
   },
   238: function (e, t) {},
@@ -1529,12 +1463,12 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(2),
-      f = o(l)
+      M = o(l)
     n(239)
-    var M = (function (e) {
+    var f = (function (e) {
       function t () {
         return r(this, t), a(this, e.apply(this, arguments))
       }
@@ -1546,7 +1480,7 @@ webpackJsonp([35783957827783], {
             n = e.target
           return (
             console.log(n),
-            c.default.createElement(
+            s.default.createElement(
               'a',
               { className: this.className, href: n },
               t
@@ -1567,18 +1501,18 @@ webpackJsonp([35783957827783], {
         ]),
         t
       )
-    })(s.Component)
-    ;(M.propTypes = {
-      primary: f.default.bool,
-      secondary: f.default.bool,
-      target: f.default.string
+    })(c.Component)
+    ;(f.propTypes = {
+      primary: M.default.bool,
+      secondary: M.default.bool,
+      target: M.default.string
     }),
-    (M.defaultProps = {
+    (f.defaultProps = {
       primary: !1,
       secondary: !0,
-      target: f.default.string
+      target: M.default.string
     }),
-    (t.default = M),
+    (t.default = f),
     (e.exports = t.default)
   },
   239: function (e, t) {},
@@ -1638,12 +1572,12 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(2),
-      f = o(l),
-      M = n(294),
-      L = o(M),
+      M = o(l),
+      f = n(294),
+      L = o(f),
       p = n(293),
       d = o(p)
     n(240)
@@ -1651,18 +1585,18 @@ webpackJsonp([35783957827783], {
       function t () {
         var n, o, u
         r(this, t)
-        for (var i = arguments.length, s = Array(i), l = 0; l < i; l++) { s[l] = arguments[l] }
+        for (var i = arguments.length, c = Array(i), l = 0; l < i; l++) { c[l] = arguments[l] }
         return (
-          (n = o = a(this, e.call.apply(e, [this].concat(s)))),
+          (n = o = a(this, e.call.apply(e, [this].concat(c)))),
           (o.getSocialImage = function (e) {
             var t = e.url,
               n = e.img
             return t === ''
               ? null
-              : c.default.createElement(
+              : s.default.createElement(
                 'a',
                 { href: t, target: '_blank' },
-                c.default.createElement('img', { src: n, alt: '' })
+                s.default.createElement('img', { src: n, alt: '' })
               )
           }),
           (u = n),
@@ -1677,17 +1611,17 @@ webpackJsonp([35783957827783], {
             n = e.position,
             o = this.photo,
             r = this.socialBlock
-          return c.default.createElement(
+          return s.default.createElement(
             'div',
             { className: 'Person' },
-            c.default.createElement(
+            s.default.createElement(
               'div',
               { className: 'main' },
-              c.default.createElement('img', { src: o, alt: '' }),
+              s.default.createElement('img', { src: o, alt: '' }),
               r
             ),
-            c.default.createElement('h1', null, t),
-            c.default.createElement('h2', null, n)
+            s.default.createElement('h1', null, t),
+            s.default.createElement('h2', null, n)
           )
         }),
         i(t, [
@@ -1698,7 +1632,7 @@ webpackJsonp([35783957827783], {
                 t = this.getSocialImage
               return e === ''
                 ? null
-                : c.default.createElement(
+                : s.default.createElement(
                   'div',
                   { className: 'social' },
                   t({ url: e, img: L.default })
@@ -1715,12 +1649,12 @@ webpackJsonp([35783957827783], {
         ]),
         t
       )
-    })(s.Component)
+    })(c.Component)
     ;(j.propTypes = {
-      photo: f.default.string,
-      name: f.default.string,
-      position: f.default.string,
-      facebook: f.default.string
+      photo: M.default.string,
+      name: M.default.string,
+      position: M.default.string,
+      facebook: M.default.string
     }),
     (j.defaultProps = { photo: '', name: '', position: '', facebook: '' }),
     (t.default = j),
@@ -1763,11 +1697,11 @@ webpackJsonp([35783957827783], {
     }
     t.__esModule = !0
     var i = n(1),
-      s = o(i),
-      c = n(2),
-      l = o(c)
+      c = o(i),
+      s = n(2),
+      l = o(s)
     n(241)
-    var f = (function (e) {
+    var M = (function (e) {
       function t () {
         return r(this, t), a(this, e.apply(this, arguments))
       }
@@ -1778,27 +1712,27 @@ webpackJsonp([35783957827783], {
             t = e.logo,
             n = e.title,
             o = e.path
-          return s.default.createElement(
+          return c.default.createElement(
             'a',
             { href: o, className: 'Project' },
-            s.default.createElement('img', { src: t, alt: n }),
-            s.default.createElement(
+            c.default.createElement('img', { src: t, alt: n }),
+            c.default.createElement(
               'div',
               { className: 'text' },
-              s.default.createElement('h1', null, n)
+              c.default.createElement('h1', null, n)
             )
           )
         }),
         t
       )
     })(i.Component)
-    ;(f.propTypes = {
+    ;(M.propTypes = {
       logo: l.default.string,
       title: l.default.string,
       website: l.default.string
     }),
-    (f.defaultProps = { logo: '', title: '', website: '' }),
-    (t.default = f),
+    (M.defaultProps = { logo: '', title: '', website: '' }),
+    (t.default = M),
     (e.exports = t.default)
   },
   241: function (e, t) {},
@@ -1851,18 +1785,18 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(2),
-      f = o(l)
+      M = o(l)
     n(242)
-    var M = (function (e) {
+    var f = (function (e) {
       function t () {
         var n, o, u
         r(this, t)
-        for (var i = arguments.length, s = Array(i), c = 0; c < i; c++) { s[c] = arguments[c] }
+        for (var i = arguments.length, c = Array(i), s = 0; s < i; s++) { c[s] = arguments[s] }
         return (
-          (n = o = a(this, e.call.apply(e, [this].concat(s)))),
+          (n = o = a(this, e.call.apply(e, [this].concat(c)))),
           (o.state = { value: '' }),
           (o.onChange = function (e) {
             var t = o.props.onChange,
@@ -1888,16 +1822,19 @@ webpackJsonp([35783957827783], {
             t = e.label,
             n = e.type,
             o = this.state.value
-          return c.default.createElement(
-            'div',
-            { className: this.className },
-            c.default.createElement('input', {
-              type: n,
-              value: o,
-              onChange: this.props.onChange
-            }),
-            c.default.createElement('label', null, ' ', t, ' '),
-            this.image
+          return (
+            console.log(o),
+            s.default.createElement(
+              'div',
+              { className: this.className },
+              s.default.createElement('input', {
+                type: n,
+                value: o,
+                onChange: this.props.onChange
+              }),
+              s.default.createElement('label', null, ' ', t, ' '),
+              this.image
+            )
           )
         }),
         i(t, [
@@ -1926,7 +1863,7 @@ webpackJsonp([35783957827783], {
             get: function () {
               var e = this.props.image
               return e !== ''
-                ? c.default.createElement('img', {
+                ? s.default.createElement('img', {
                   src: e,
                   alt: '',
                   className: 'image'
@@ -1937,17 +1874,17 @@ webpackJsonp([35783957827783], {
         ]),
         t
       )
-    })(s.Component)
-    ;(M.propTypes = {
-      label: f.default.string,
-      image: f.default.string,
-      type: f.default.string,
-      value: f.default.string,
-      acceptsBlankValue: f.default.bool,
-      validator: f.default.func,
-      onChange: f.default.func
+    })(c.Component)
+    ;(f.propTypes = {
+      label: M.default.string,
+      image: M.default.string,
+      type: M.default.string,
+      value: M.default.string,
+      acceptsBlankValue: M.default.bool,
+      validator: M.default.func,
+      onChange: M.default.func
     }),
-    (M.defaultProps = {
+    (f.defaultProps = {
       label: '',
       image: '',
       type: 'text',
@@ -1958,7 +1895,7 @@ webpackJsonp([35783957827783], {
       },
       onChange: function () {}
     }),
-    (t.default = M),
+    (t.default = f),
     (e.exports = t.default)
   },
   242: function (e, t) {},
@@ -2011,12 +1948,12 @@ webpackJsonp([35783957827783], {
           return n && e(t.prototype, n), o && e(t, o), t
         }
       })(),
-      s = n(1),
-      c = o(s),
+      c = n(1),
+      s = o(c),
       l = n(2),
-      f = o(l)
+      M = o(l)
     n(243)
-    var M = (function (e) {
+    var f = (function (e) {
       function t () {
         return r(this, t), a(this, e.apply(this, arguments))
       }
@@ -2026,7 +1963,7 @@ webpackJsonp([35783957827783], {
           var e = this.props.text,
             t = this.bolded,
             n = this.style
-          return c.default.createElement(
+          return s.default.createElement(
             'div',
             { className: 'Title', style: n },
             e,
@@ -2047,20 +1984,20 @@ webpackJsonp([35783957827783], {
               var e = this.props.bolded
               return e === ''
                 ? null
-                : c.default.createElement('span', { className: 'bolded' }, e)
+                : s.default.createElement('span', { className: 'bolded' }, e)
             }
           }
         ]),
         t
       )
-    })(s.Component)
-    ;(M.propTypes = {
-      text: f.default.string,
-      bolded: f.default.string,
-      color: f.default.string
+    })(c.Component)
+    ;(f.propTypes = {
+      text: M.default.string,
+      bolded: M.default.string,
+      color: M.default.string
     }),
-    (M.defaultProps = { text: '', bolded: '', color: 'currentColor' }),
-    (t.default = M),
+    (f.defaultProps = { text: '', bolded: '', color: 'currentColor' }),
+    (t.default = f),
     (e.exports = t.default)
   },
   243: function (e, t) {},
@@ -2101,61 +2038,61 @@ webpackJsonp([35783957827783], {
     }
     t.__esModule = !0
     var i = n(1),
-      s = o(i),
-      c = n(267),
-      l = o(c),
-      f = n(126),
-      M = o(f),
+      c = o(i),
+      s = n(267),
+      l = o(s),
+      M = n(126),
+      f = o(M),
       L = n(123),
       p = o(L),
       d = n(127),
       j = o(d),
       w = n(128),
       y = o(w),
-      m = n(125),
-      N = o(m),
+      N = n(125),
+      m = o(N),
       h = n(121),
       g = o(h),
       b = n(122),
-      E = o(b)
+      D = o(b)
     n(244)
-    var D = (function (e) {
+    var E = (function (e) {
       function t () {
         return r(this, t), a(this, e.apply(this, arguments))
       }
       return (
         u(t, e),
         (t.prototype.render = function () {
-          return s.default.createElement(
+          return c.default.createElement(
             i.Fragment,
             null,
-            s.default.createElement(M.default, null),
-            s.default.createElement(
+            c.default.createElement(f.default, null),
+            c.default.createElement(
               l.default,
               { id: 'about' },
-              s.default.createElement(p.default, { people: g.default })
+              c.default.createElement(p.default, { people: g.default })
             ),
-            s.default.createElement(
+            c.default.createElement(
               l.default,
               { id: 'projects' },
-              s.default.createElement(j.default, { projects: E.default })
+              c.default.createElement(j.default, { projects: D.default })
             ),
-            s.default.createElement(
+            c.default.createElement(
               l.default,
               { id: 'sponsorship' },
-              s.default.createElement(y.default, null)
+              c.default.createElement(y.default, null)
             ),
-            s.default.createElement(
+            c.default.createElement(
               l.default,
               { id: 'contact' },
-              s.default.createElement(N.default, null)
+              c.default.createElement(m.default, null)
             )
           )
         }),
         t
       )
     })(i.Component)
-    ;(t.default = D), (e.exports = t.default)
+    ;(t.default = E), (e.exports = t.default)
   }
 })
-// # sourceMappingURL=component---src-pages-index-js-2171ac89d61cc7a79455.js.map
+// # sourceMappingURL=component---src-pages-index-js-d13b501634669feb7cf4.js.map
