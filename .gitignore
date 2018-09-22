@@ -4,7 +4,6 @@ node_modules
 .cache/
 .idea/
 # Build directory
-public/
 .DS_Store
 desktop.ini
 yarn-error.log
