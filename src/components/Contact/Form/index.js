@@ -40,7 +40,6 @@ class Form extends Component {
     ) {
       return
     }
-    console.log('wt')
     let body = {
       'entry.649419642': this.state.name,
       'entry.2000347351': this.state.email,
@@ -86,7 +85,6 @@ class Form extends Component {
   }
 
   render () {
-    console.log(this.state)
     return (
       <div className='Form'>
         <p>
