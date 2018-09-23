@@ -24,7 +24,7 @@ class About extends Component {
   render () {
     return (
       <div className='About'>
-        <Title text='despre' bolded='noi' color='#ef4924' />
+        <Title text='Despre' bolded='noi' color='#ef4924' />
         <div className='content'>
           <div className='text'>
             <p className='about_text'>

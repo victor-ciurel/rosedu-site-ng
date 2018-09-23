@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `ROSEdu Website`
   },
-  pathPrefix: '/',
+  pathPrefix: '/site-ng',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
