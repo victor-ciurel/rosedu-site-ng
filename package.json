@@ -31,7 +31,8 @@
         "test-prettier": "CI=true yarn test",
         "pretty": "prettier-standard --write \"src/**/*.js\"",
         "precommit": "lint-staged",
-        "prepush": "yarn test-prettier"
+        "prepush": "yarn test-prettier",
+        "deploy": "gatsby build --prefix-paths && gh-pages -d public"
     },
     "lint-staged": {
         "*.js": [
@@ -84,6 +85,7 @@
         "babel-plugin-transform-class-properties": "^6.24.1",
         "enzyme": "^3.2.0",
         "enzyme-adapter-react-16": "^1.1.1",
+        "gh-pages": "^2.0.0",
         "husky": "^0.14.3",
         "jest": "^22.0.3",
         "lint-staged": "^7.0.4",

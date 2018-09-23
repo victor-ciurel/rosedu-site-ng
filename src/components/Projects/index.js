@@ -26,7 +26,7 @@ class Projects extends Component {
 
     return (
       <div className='Projects'>
-        <Title text='proiecte' color='#fff' />
+        <Title text='Proiecte' color='#fff' />
 
         <div className='content'>
           <div className='text'>

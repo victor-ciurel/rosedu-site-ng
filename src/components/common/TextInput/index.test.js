@@ -16,7 +16,7 @@ describe('TextInput', () => {
   //
   //   expect(props.onChange).toBeCalledWith('a')
   // })
-
+  //
   // it('shows error state based on validator', () => {
   //   const props = {
   //     validator: () => false
@@ -25,7 +25,7 @@ describe('TextInput', () => {
   //   wrapper.find('input').simulate('change', { target: { value: 'a' } })
   //   expect(wrapper.hasClass('error')).toBe(true)
   // })
-
+  //
   // it('correctly updates values with props change', () => {
   //   const wrapper = shallow(<TextInput />)
   //   wrapper.find('input').simulate('change', { target: { value: 'testing' } })
@@ -35,7 +35,7 @@ describe('TextInput', () => {
   //   wrapper.setProps({ onChange: () => {} })
   //   expect(wrapper.state().value).toEqual('testing')
   // })
-
+  //
   // it('correctly resets value on props change', () => {
   //   const props = {
   //     value: 'test1'
@@ -55,7 +55,7 @@ describe('TextInput', () => {
   //   wrapper.find('input').simulate('change', { target: { value: 'test4' } })
   //   expect(wrapper.state().value).toEqual('test4')
   // })
-
+  //
   // it('resets to blank if correct prop passed', () => {
   //   const props = {
   //     acceptsBlankValue: true
