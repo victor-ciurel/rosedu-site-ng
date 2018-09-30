@@ -77,8 +77,8 @@ class Person extends Component {
           <img src={photo} alt='' />
           {socialBlock}
         </div>
-        <h1>{name}</h1>
-        <h2>{position}</h2>
+        <h1 className={'Person_Details'}>{name}</h1>
+        <h2 className={'Person_Details'}>{position}</h2>
       </div>
     )
   }

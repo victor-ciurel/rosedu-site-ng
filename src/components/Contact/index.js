@@ -15,7 +15,7 @@ class Contact extends Component {
   render () {
     return (
       <div className='Contact'>
-        <Title text='contact' color='#23a94b' />
+        <Title text='Contact' color='#23a94b' />
         <div className='content'>
           <Form />
           <iframe

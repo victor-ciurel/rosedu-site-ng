@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import './index.scss'
 
 import Title from 'components/common/Title'
-import Button from 'components/common/Button'
 import ButtonLink from 'components/common/ButtonLink'
 import Project from 'components/common/Project'
 
@@ -26,7 +25,7 @@ class Projects extends Component {
 
     return (
       <div className='Projects'>
-        <Title text='Proiecte' color='#fff' />
+        <Title text='Proiecte' color='black' />
 
         <div className='content'>
           <div className='text'>
@@ -45,7 +44,9 @@ class Projects extends Component {
                 așteptăm să ne ajuți să îmbunătățim împreună educația.
               </p>
             </div>
-            <ButtonLink target={'#contact'}>Vrei să te implici ?</ButtonLink>
+            <ButtonLink target={'#contact'} primary={true}>
+              Vrei să te implici ?
+            </ButtonLink>
           </div>
           <div className='list' style={{ marginLeft: '70px' }}>
             {projects.map((x, i) => <Project key={i} {...x} />)}
