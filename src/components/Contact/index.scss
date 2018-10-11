@@ -40,4 +40,24 @@
       color: white;
     }
   }
+
+  .sponsor {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    color: green;
+  }
+
+  .sponsor_images_container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sponsor_img {
+    margin: 25px;
+    height: 75px;
+    width: 150px;
+  }
+
 }
