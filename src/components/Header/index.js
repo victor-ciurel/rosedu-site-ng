@@ -20,13 +20,21 @@ class Header extends Component {
   }
 
   getTranslateButton () {
+    let url
+
+    url = typeof window !== 'undefined' && window.location.href
     if (this.props.lang === 'en') {
+      if (url) {
+        url = url.substr(0, url.length - 1)
+        url = url.substr(0, url.lastIndexOf('/') + 1)
+      }
       return (
-        <a href='/'>
+        <a href={url}>
           <img src={roPhoto} className='translate_button' />
         </a>
       )
     }
+    url += 'en'
     return (
       <a href='en'>
         <img src={usPhoto} className='translate_button' />
