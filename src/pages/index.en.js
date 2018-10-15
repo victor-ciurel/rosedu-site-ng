@@ -20,22 +20,22 @@ class Home extends Component {
     console.log(this.props)
     return (
       <Fragment>
-        <Header />
+        <Header lang={'en'} />
 
         <ScrollableAnchor id={'about'}>
-          <About people={people} />
+          <About people={people} lang={'en'} />
         </ScrollableAnchor>
 
         <ScrollableAnchor id={'projects'}>
-          <Projects projects={projects} />
+          <Projects projects={projects} lang={'en'} />
         </ScrollableAnchor>
 
         <ScrollableAnchor id={'sponsorship'}>
-          <Sponsorship />
+          <Sponsorship lang={'en'} />
         </ScrollableAnchor>
 
         <ScrollableAnchor id={'contact'}>
-          <Contact />
+          <Contact lang={'en'} />
         </ScrollableAnchor>
       </Fragment>
     )

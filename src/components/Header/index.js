@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Text from './text_translations'
+
 import ButtonLink from 'components/common/ButtonLink'
 
 import facebook from './assets/facebook.png'
@@ -7,12 +9,30 @@ import headerImage from './assets/logo_principal.jpg'
 import roseduLogo from './assets/logoWhite.svg'
 import slack from './assets/slack.svg'
 import mail from './assets/mail.svg'
+import roPhoto from './assets/ro_photo.png'
+import usPhoto from './assets/us_photo.png'
 
 import './index.scss'
 
 class Header extends Component {
-  static propTypes = {}
-  static defaultProps = {}
+  static defaultProps = {
+    lang: 'ro'
+  }
+
+  getTranslateButton () {
+    if (this.props.lang === 'en') {
+      return (
+        <a href='/'>
+          <img src={roPhoto} className='translate_button' />
+        </a>
+      )
+    }
+    return (
+      <a href='en'>
+        <img src={usPhoto} className='translate_button' />
+      </a>
+    )
+  }
 
   render () {
     return (
@@ -21,13 +41,13 @@ class Header extends Component {
           <img src={roseduLogo} alt='' />
           <nav>
             <a href='#about'>
-              <span>despre noi</span>
+              <span>{Text['about_us_header'][this.props.lang]}</span>
             </a>
             <a href='#projects'>
-              <span>proiecte</span>
+              <span>{Text['projects_header'][this.props.lang]}</span>
             </a>
             <a href='#contact'>
-              <span>contact</span>
+              <span>{Text['contact_header'][this.props.lang]}</span>
             </a>
             <a href='https://rosedu.herokuapp.com/' target='_blank'>
               <img src={slack} alt='' />
@@ -43,24 +63,19 @@ class Header extends Component {
             </a>
           </nav>
           <ButtonLink primary target={'#sponsorship'}>
-            Susține ROSEdu!
+            {Text['support_header_button'][this.props.lang]}
           </ButtonLink>
+          {this.getTranslateButton()}
         </header>
         <main>
           <div className='text'>
-            <h2>Susținem o educație</h2>
-            <h1>open source</h1>
+            <h2>{Text['title_1'][this.props.lang]}</h2>
+            <h1>{Text['title_2'][this.props.lang]}</h1>
 
-            <p>
-              ROSEdu este o organizație Open Source bazate pe o comunitate
-              formată din programări și entuziașți de software. Misiunea pentru
-              care suntem foarte dedidacați este aceea de a iniția, sprijinii și
-              dezvolta educația bazată pe valorile Open Source.
-            </p>
+            <p>{Text['content'][this.props.lang]}</p>
 
             <ButtonLink target={'#projects'}>
-              {' '}
-              Vezi proiectele noastre{' '}
+              {Text['projects_button'][this.props.lang]}
             </ButtonLink>
           </div>
           <img className='header_logo' src={headerImage} alt='' />

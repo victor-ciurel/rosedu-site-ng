@@ -3,48 +3,40 @@ import React, { Component } from 'react'
 import Title from 'components/common/Title'
 import ButtonLink from 'components/common/ButtonLink'
 
+import Text from './text_translations'
 import './index.scss'
 
 class Sponsorship extends Component {
   static propTypes = {}
-  static defaultProps = {}
+  static defaultProps = {
+    lang: 'ro'
+  }
 
   render () {
     return (
       <div className='Sponsorship'>
-        <Title text='Susține ROSEdu' color='white' />
+        <Title text={Text['title'][this.props.lang]} color='white' />
         <div className='content'>
-          <p className='content_text'>
-            Dacă dorești să susții activitățile organizației ROSEdu, avem aici
-            mai multe variante prin care poți face asta. Daca ai nevoie de
-            ajutor, sau ești interesat de un parteneriat, folosește formularul
-            de contact și hai să ne auzim!
-          </p>
+          <p className='content_text'>{Text['paragraph'][this.props.lang]}</p>
         </div>
         <div className='boxes'>
           <div className='box'>
-            <h2>Voluntariat</h2>
-            <p>Vrei să fii un voluntar ROSEdu ?</p>
+            <h2>{Text['volunteer_title'][this.props.lang]}</h2>
+            <p>{Text['volunteer_content'][this.props.lang]}</p>
             <ButtonLink primary={true} target={'#contact'}>
-              Trimite mesaj
+              {Text['volunteer_button'][this.props.lang]}
             </ButtonLink>
           </div>
           <div className='box'>
-            <h2>Cont bancar</h2>
-            <p>
-              Ne poți susține și prin donarea unei sume de bani la următorul
-              cont:
-            </p>
+            <h2>{Text['bank_title'][this.props.lang]}</h2>
+            <p>{Text['bank_content'][this.props.lang]}</p>
             <h3>RO99INGB12345678</h3>
           </div>
           <div className='box'>
-            <h2>Sponsorizare</h2>
-            <p>
-              Dacă dorești să avem un parteneriat direct de sponsorizare,
-              trimite-ne un mesaj!
-            </p>
+            <h2>{Text['sponsorship_title'][this.props.lang]}</h2>
+            <p>{Text['sponsorship_content'][this.props.lang]}</p>
             <ButtonLink primary={true} target={'#contact'}>
-              Trimite mesaj
+              {Text['sponsorship_button'][this.props.lang]}
             </ButtonLink>
           </div>
         </div>

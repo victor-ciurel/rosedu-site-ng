@@ -18,6 +18,13 @@ module.exports = {
         id: 0,
         sv: 0
       }
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'ro',
+        useLangKeyLayout: false
+      }
     }
   ]
 }

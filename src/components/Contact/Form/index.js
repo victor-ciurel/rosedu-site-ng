@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Text from './text_translations'
+
 import TextInput from 'components/common/TextInput'
 import Button from 'components/common/Button'
 
@@ -8,7 +10,6 @@ import twitter from './assets/twitter.svg'
 import slack from './assets/slack.svg'
 
 import './index.scss'
-import PropTypes from 'prop-types'
 
 const emailValidator = email => {
   let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -20,7 +21,9 @@ const emptyValidator = inputText => {
 }
 
 class Form extends Component {
-  static propTypes = {}
+  static defaultProps = {
+    lang: 'ro'
+  }
 
   state = {
     name: '',
@@ -88,17 +91,10 @@ class Form extends Component {
     return (
       <div className='Form'>
         <p>
-          Fiind o comunitate de oameni entuziasmați de tehnologie si programare,
-          sediul nostru se afla in cadrul Facultății de Automatică si
-          Calculatoare, din cadrul Universității Politehnica București. Aici
-          desfăsurăm și majoritatea proiectelor la care ești binevenit să
-          participi sau să ne ajuti sa le organizam. Pentru a putea lua legatura
-          cu tine, te rugăm să ne trimiți un mesaj, completând formularul de mai
-          jos, urmând ca noi sa luam legatura cu tine in cel mai scurt timp
-          posibil.
+          {Text['paragraph_1'][this.props.lang]}
           <br />
           <br />
-          Abia asteptam sa colaboram impreuma.
+          {Text['paragraph_2'][this.props.lang]}
         </p>
         <div className='social'>
           <span>
@@ -116,31 +112,32 @@ class Form extends Component {
         </div>
         {this.state.messageSent ? (
           <div>
-            <div className='message_sent'>Mesajul a fost trimis!</div>
+            <div className='message_sent'>
+              {Text['message_success_1'][this.props.lang]}
+            </div>
             <br />
             <div className='message_sent_details'>
-              Vom raspunde in cel mai scurt timp posibil.{' '}
+              {Text['message_success_2'][this.props.lang]}
             </div>
           </div>
         ) : (
           <div className='form'>
             <TextInput
               id={'name_input'}
-              label='Nume'
+              label={Text['name_input_label'][this.props.lang]}
               value={this.state.name}
               onChange={this.onChangeName}
             />
             <TextInput
               id={'email_input'}
-              label='E-mail'
+              label={Text['email_input_label'][this.props.lang]}
               validator={emailValidator}
               value={this.state.email}
               onChange={this.onChangeEmail}
             />
             <TextInput
               id={'mesaj_input'}
-              label='Mesaj'
-              value={this.state.message}
+              label={Text['message_input_label'][this.props.lang]}
               value={this.state.message}
               onChange={this.onChangeMessage}
             />
@@ -148,14 +145,17 @@ class Form extends Component {
             this.state.messageError === true ? (
                 <div>
                   <div className='message_error'>
-                  Ne pare rau dar mesajul nu a putut fi primit.
+                    {Text['message_failed_1'][this.props.lang]}
                   </div>
                   <div className='message_error_details'>
-                  Incercati din nou in scurt timp.
+                    {Text['message_failed_2'][this.props.lang]}
                   </div>
                 </div>
               ) : null}
-            <Button onClick={this.postMessageHandler}> Trimite mesaj </Button>
+            <Button onClick={this.postMessageHandler}>
+              {' '}
+              {Text['send_message_button'][this.props.lang]}{' '}
+            </Button>
           </div>
         )}
       </div>
