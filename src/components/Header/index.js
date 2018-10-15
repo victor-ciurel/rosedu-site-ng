@@ -19,27 +19,28 @@ class Header extends Component {
     lang: 'ro'
   }
 
-  getTranslateButton () {
-    let url
+  state = {
+    url: '',
+    photo: ''
+  }
 
-    url = typeof window !== 'undefined' && window.location.href
+  componentDidMount () {
+    this.getTranslationState()
+  }
+
+  getTranslationState () {
+    let url = window.location.href
+    let photo = null
     if (this.props.lang === 'en') {
-      if (url) {
-        url = url.substr(0, url.length - 1)
-        url = url.substr(0, url.lastIndexOf('/') + 1)
-      }
-      return (
-        <a href={url}>
-          <img src={roPhoto} className='translate_button' />
-        </a>
-      )
+      url = url.substr(0, url.length - 1)
+      url = url.substr(0, url.lastIndexOf('/') + 1)
+      photo = usPhoto
+    } else {
+      url += 'en'
+      photo = roPhoto
     }
-    url += 'en'
-    return (
-      <a href='en'>
-        <img src={usPhoto} className='translate_button' />
-      </a>
-    )
+
+    this.setState({ url: url, photo: photo })
   }
 
   render () {
@@ -73,7 +74,9 @@ class Header extends Component {
           <ButtonLink primary target={'#sponsorship'}>
             {Text['support_header_button'][this.props.lang]}
           </ButtonLink>
-          {this.getTranslateButton()}
+          <a href={this.state.url}>
+            <img src={this.state.photo} className='translate_button' />
+          </a>
         </header>
         <main>
           <div className='text'>

@@ -17,7 +17,6 @@ import '../index.scss'
  */
 class Home extends Component {
   render () {
-    console.log(this.props)
     return (
       <Fragment>
         <Header lang={'en'} />
