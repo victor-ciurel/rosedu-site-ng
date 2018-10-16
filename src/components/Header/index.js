@@ -34,10 +34,10 @@ class Header extends Component {
     if (this.props.lang === 'en') {
       url = url.substr(0, url.length - 1)
       url = url.substr(0, url.lastIndexOf('/') + 1)
-      photo = usPhoto
+      photo = roPhoto
     } else {
       url += 'en'
-      photo = roPhoto
+      photo = usPhoto
     }
 
     this.setState({ url: url, photo: photo })
