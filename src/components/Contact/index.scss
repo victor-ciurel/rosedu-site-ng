@@ -2,16 +2,58 @@
   padding: 50px 150px;
   min-height: 50vh;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .Title {
+    margin-bottom: 50px;
+    font-size: 80px;
+    text-align: center;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 40px;
+      font-size: 70px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-bottom: 30px;
+      font-size: 60px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+      font-size: 50px;
+    }
+    @media screen and (max-width: 600px) {
+      margin-bottom: 10px;
+      font-size: 40px;
+    }
+  }
 
   @media screen and (max-width: 1000px) {
     padding: 15px;
   }
 
   .Map {
-    margin-left: 20px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     width: 600px;
     height: 350px;
-    border: 0;
+
+    @media screen and (max-width: 1200px) {
+      width: 550px;
+    }
+    @media screen and (max-width: 992px) {
+      width: 500px;
+      height: 300px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 450px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 300px;
+      height: 250px;
+    }
   }
 
   .content {
@@ -19,10 +61,12 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1200px) {
       flex-direction: column;
-      padding: 30px;
     }
+  }
+  .Form {
+    margin-right: 40px;
   }
 
   .Button {
@@ -51,19 +95,26 @@
   .sponsor_images_container {
     margin-top: 25px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   .sponsor_img {
-    margin-left: 35px;
-    height: 90px;
-    width: 120px;
-  }
-
-  .sponsor_img_wider {
-    margin-left: 35px;
-    height: 70px;
     width: 200px;
+    @media screen and (max-width: 1200px) {
+      width: 180px;
+    }
+    @media screen and (max-width: 992px) {
+      width: 160px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 140px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 120px;
+    }
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
 }
