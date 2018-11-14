@@ -1,8 +1,8 @@
 .Form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 60px;
-  margin-right: 120px;
   max-width: 600px;
 
   @media screen and (max-width: 1366px) {
@@ -24,9 +24,20 @@
       padding: 15px 0;
 
       img {
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
+        margin-right: 5px;
+        width: 45px;
+        @media screen and (max-width: 1200px) {
+          width: 40px;
+        }
+        @media screen and (max-width: 992px) {
+          width: 35px;
+        }
+        @media screen and (max-width: 768px) {
+          width: 30px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 25px;
+        }
       }
     }
   }
@@ -39,8 +50,10 @@
     .TextInput {
       width: 100%;
 
-      &:not(:nth-child(3)) {
-        width: calc(50% - 5px);
+      @media screen and (min-width: 600px) {
+        &:not(:nth-child(3)) {
+          width: calc(50% - 5px);
+        }
       }
     }
   }

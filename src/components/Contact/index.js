@@ -7,8 +7,6 @@ import Form from './Form'
 
 import ixiaLogo from './assets/ixia_logo.png'
 import bloombergLogo from './assets/logo-bloomberg.png'
-import wyliodrinLogo from './assets/logo-wyliodrin.png'
-import acsLogo from './assets/logo-acs-text.png'
 
 import './index.scss'
 
@@ -37,16 +35,10 @@ class Contact extends Component {
           </div>
           <div className='sponsor_images_container'>
             <a href={'https://www.ixiacom.com/'}>
-              <img className='sponsor_img_wider' src={ixiaLogo} alt='' />
+              <img className='sponsor_img' src={ixiaLogo} alt='' />
             </a>
             <a href={'https://www.bloomberg.com/careers'}>
               <img className='sponsor_img' src={bloombergLogo} alt='' />
-            </a>
-            <a href={'https://www.wyliodrin.com/'}>
-              <img className='sponsor_img' src={wyliodrinLogo} alt='' />
-            </a>
-            <a href={'http://acs.pub.ro/'}>
-              <img className='sponsor_img_wider' src={acsLogo} alt='' />
             </a>
           </div>
         </div>

@@ -39,8 +39,12 @@ class Projects extends Component {
               {Text['button_message'][this.props.lang]}
             </ButtonLink>
           </div>
-          <div className='list' style={{ marginLeft: '70px' }}>
-            {projects.map((x, i) => <Project key={i} {...x} />)}
+          <div className='list'>
+            {projects.map((x, i) => (
+              <div className='project_placeholder'>
+                <Project key={i} {...x} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
