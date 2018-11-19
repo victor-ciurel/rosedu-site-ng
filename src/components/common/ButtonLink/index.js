@@ -36,7 +36,6 @@ class ButtonLink extends Component {
     const {
       props: { children, target }
     } = this
-    console.log(target)
     return (
       <a className={this.className} href={target}>
         {children}
