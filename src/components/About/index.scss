@@ -55,6 +55,7 @@
     }
 
     .people {
+      max-width: 700px;
       align-items: center;
       display: flex;
       justify-content: center;
@@ -62,8 +63,11 @@
       margin-left: auto;
 
       @media screen and (max-width: 1366px) {
-        width: 100%;
         margin: 30px auto;
+	max-width: 50%;
+      }
+      @media screen and (max-width: 768px) {
+	max-width: none;
       }
 
     }
