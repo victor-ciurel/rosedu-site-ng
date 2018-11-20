@@ -30,11 +30,11 @@ export default {
       "we are always happy having new members aboard, regardless of where they come from. We're waiting for you, too!"
   },
   button_main_members: {
-    ro: 'Arata mai putini',
-    en: 'Show less'
+    ro: 'Arată toți membrii',
+    en: 'Show all members'
   },
   button_extra_members: {
-    ro: 'Arata toti memberi',
-    en: 'Show all members'
+    ro: 'Ascunde toți membrii',
+    en: 'Hide all members'
   }
 }
