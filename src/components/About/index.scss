@@ -53,6 +53,22 @@
 
       width: 100%;
     }
+    .showButton {
+      display: flex;
+      justify-content: center;
+
+      width: 200px;
+      margin-bottom: 10px;
+
+      padding-bottom: 46px; // empirical height of member name and position
+    }
+    .Button {
+      margin: 0px 0px 0px 0px;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      border-radius: 35px;
+    }
 
     .people {
       max-width: 700px;

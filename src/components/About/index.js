@@ -30,16 +30,29 @@ class About extends Component {
   }
 
   mainMembers = () => {
-    return this.props.people['main_members'].map((x, i) => (
-      <Person key={'member_' + i} {...x} />
-    ))
+    let showMainMembersButton =
+      <div key='showButton' className='showButton'>
+        <Button onClick={this.toggleShowAllMembers}>
+          {Text['button_main_members'][this.props.lang]}
+        </Button>
+      </div>
+    return [this.props.people['main_members'].map((x, i) => (
+	      <Person key={'member_' + i} {...x} />)),
+	    showMainMembersButton]
   }
 
   allMembers = () => {
     let allMembers = this.props.people['main_members'].concat(
       this.props.people['extra_members']
     )
-    return allMembers.map((x, i) => <Person key={'member_' + i} {...x} />)
+    let showAllMembersButton =
+       <div key='showButton' className='showButton'>
+         <Button onClick={this.toggleShowAllMembers}>
+           {Text['button_extra_members'][this.props.lang]}
+         </Button>
+       </div>
+    return [allMembers.map((x, i) => <Person key={'member_' + i} {...x} />),
+	    showAllMembersButton]
   }
 
   showMainMembersButton = () => {
@@ -73,9 +86,6 @@ class About extends Component {
           </div>
           <div className='people'>
             {this.state.showAllMembers ? this.allMembers() : this.mainMembers()}
-            {this.state.showAllMembers
-              ? this.showMainMembersButton()
-              : this.showAllMembersButton()}
           </div>
         </div>
       </div>
