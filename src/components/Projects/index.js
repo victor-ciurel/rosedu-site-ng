@@ -24,7 +24,6 @@ class Projects extends Component {
     const {
       props: { projects }
     } = this
-
     return (
       <div className='Projects'>
         <Title text={Text['title'][this.props.lang]} color='black' />
@@ -41,8 +40,8 @@ class Projects extends Component {
           </div>
           <div className='list'>
             {projects.map((x, i) => (
-              <div className='project_placeholder'>
-                <Project key={i} {...x} />
+              <div key={'project_' + i} className='project_placeholder'>
+                <Project {...x} />
               </div>
             ))}
           </div>

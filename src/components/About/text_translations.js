@@ -28,5 +28,13 @@ export default {
     en:
       'Most ROSEdu members are currently students or graduates of the Polytechnic University of Bucharest, but ' +
       "we are always happy having new members aboard, regardless of where they come from. We're waiting for you, too!"
+  },
+  button_main_members: {
+    ro: 'Arată toți membrii',
+    en: 'Show all members'
+  },
+  button_extra_members: {
+    ro: 'Ascunde toți membrii',
+    en: 'Hide all members'
   }
 }

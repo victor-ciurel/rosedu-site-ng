@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Text from './text_translations'
 import Title from 'components/common/Title'
 import Person from 'components/common/Person'
+import Button from '../common/Button'
 
 import './index.scss'
 
@@ -12,7 +13,7 @@ import './index.scss'
  */
 class About extends Component {
   static propTypes = {
-    people: PropTypes.arrayOf(PropTypes.object)
+    people: PropTypes.object
   }
 
   static defaultProps = {
@@ -20,8 +21,54 @@ class About extends Component {
     lang: 'ro'
   }
 
-  get people () {
-    return this.props.people.map((x, i) => <Person key={i} {...x} />)
+  state = {
+    showAllMembers: false
+  }
+
+  toggleShowAllMembers = () => {
+    this.setState({ showAllMembers: !this.state.showAllMembers })
+  }
+
+  mainMembers = () => {
+    let showMainMembersButton =
+      <div key='showButton' className='showButton'>
+        <Button onClick={this.toggleShowAllMembers}>
+          {Text['button_main_members'][this.props.lang]}
+        </Button>
+      </div>
+    return [this.props.people['main_members'].map((x, i) => (
+	      <Person key={'member_' + i} {...x} />)),
+	    showMainMembersButton]
+  }
+
+  allMembers = () => {
+    let allMembers = this.props.people['main_members'].concat(
+      this.props.people['extra_members']
+    )
+    let showAllMembersButton =
+       <div key='showButton' className='showButton'>
+         <Button onClick={this.toggleShowAllMembers}>
+           {Text['button_extra_members'][this.props.lang]}
+         </Button>
+       </div>
+    return [allMembers.map((x, i) => <Person key={'member_' + i} {...x} />),
+	    showAllMembersButton]
+  }
+
+  showMainMembersButton = () => {
+    return (
+      <Button onClick={this.toggleShowAllMembers}>
+        {Text['button_main_members'][this.props.lang]}
+      </Button>
+    )
+  }
+
+  showAllMembersButton = () => {
+    return (
+      <Button onClick={this.toggleShowAllMembers}>
+        {Text['button_extra_members'][this.props.lang]}
+      </Button>
+    )
   }
 
   render () {
@@ -37,7 +84,9 @@ class About extends Component {
             <p className='about_text'>{Text['paragraph_1'][this.props.lang]}</p>
             <p className='about_text'>{Text['paragraph_2'][this.props.lang]}</p>
           </div>
-          <div className='people'>{this.people}</div>
+          <div className='people'>
+            {this.state.showAllMembers ? this.allMembers() : this.mainMembers()}
+          </div>
         </div>
       </div>
     )

@@ -10,7 +10,7 @@ class Project extends Component {
   static propTypes = {
     logo: PropTypes.string,
     title: PropTypes.string,
-    website: PropTypes.string
+    path: PropTypes.string
   }
   static defaultProps = {
     logo: '',
