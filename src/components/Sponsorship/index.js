@@ -30,7 +30,7 @@ class Sponsorship extends Component {
           <div className='box'>
             <h2>{Text['bank_title'][this.props.lang]}</h2>
             <p>{Text['bank_content'][this.props.lang]}</p>
-            <h3>RO99INGB12345678</h3>
+            <h3>RO98BTRL04501205R50291XX</h3>
           </div>
           <div className='box'>
             <h2>{Text['sponsorship_title'][this.props.lang]}</h2>
