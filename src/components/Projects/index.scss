@@ -66,6 +66,9 @@
   .list {
     display: flex;
     width: 50%;
+    @media screen and (max-width: 1366px) {
+      width: 100%;
+    }
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
