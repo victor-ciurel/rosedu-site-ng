@@ -5,11 +5,11 @@ export default {
   },
   paragraph: {
     ro:
-      'Dacă dorești să susții activitățile organizației ROSEdu, avem aici mai multe variante prin care poți face' +
-      ' asta. Daca doresti sa ne dai o mana de ajutor, sau ești interesat de un parteneriat, folosește formularul de contact și' +
+      'Dacă dorești să susții activitățile organizației ROSEdu, avem mai multe variante prin care poți face' +
+      ' asta. Dacă dorești să ne dai o mână de ajutor, sau ești interesat de un parteneriat, folosește formularul de contact și' +
       ' hai să ne auzim!',
     en:
-      'If you want to support ROSEdu activities, we have several options to do that. ' +
+      'If you want to support ROSEdu\'s activities, we have several options to do that. ' +
       'If you want to give us a helping hand or you are interested in a partnership, use the contact form and ' +
       'let us get in touch with you!'
   },
@@ -18,8 +18,8 @@ export default {
     en: 'Volunteering'
   },
   volunteer_content: {
-    ro: 'Vrei să fii un voluntar ROSEdu ?',
-    en: 'Want to be a volunteer ROSEdu?'
+    ro: 'Vrei să fii un voluntar ROSEdu?',
+    en: 'Want to be a ROSEdu volunteer?'
   },
   volunteer_button: {
     ro: 'Trimite mesaj',
@@ -38,9 +38,8 @@ export default {
     en: 'Sponsorship'
   },
   sponsorship_content: {
-    ro:
-      'Dacă dorești să avem un parteneriat direct de sponsorizare, trimite-ne un mesaj!',
-    en: 'If you want to have a direct partnership, send us a message!'
+    ro: 'Dacă dorești să avem un parteneriat de sponsorizare, trimite-ne un mesaj!',
+    en: 'If you want to have a partnership, send us a message!'
   },
   sponsorship_button: {
     ro: 'Trimite mesaj',

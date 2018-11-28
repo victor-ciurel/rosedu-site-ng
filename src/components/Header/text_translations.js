@@ -9,7 +9,7 @@ export default {
   },
   content: {
     ro:
-      'ROSEdu este o organizație Open Source ce are la bază pe o comunitate formată din programatori și entuziașți de software. Misiunea pentru care suntem foarte dedidacați este aceea de a iniția, sprijinii și dezvolta educația bazată pe valorile Open Source.',
+      'ROSEdu este o organizație Open Source ce are la bază o comunitate formată din programatori și entuziaști ai software-ului. Misiunea căreia îi suntem dedicați este aceea de a iniția, sprijinii și dezvolta educația bazată pe valorile Open Source.',
     en:
       'ROSEdu is an Open Source organization based on a community of programmers and software enthusiasts. The mission for which we are very dedicated is to initiate, support and develop Open Source-based education.'
   },
