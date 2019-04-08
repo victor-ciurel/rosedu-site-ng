@@ -17,7 +17,15 @@ import teodorSzenteImg from './teodor_szente.jpg'
 import tudorCebereImg from './tudor_cebere.jpg'
 import horiaIonImg from './horia_ion.jpg'
 import dianaGrecuImg from './diana_grecu.jpg'
-
+import andreiSeritanImg from './andrei_seritan.jpg'
+import ebruResulImg from './ebru_resul.jpg'
+import dorinGemanImg from './dorin_geman.jpg'
+import andraDanciuImg from './andra_danciu.jpg'
+import dariusNeatuImg from './darius_neatu.jpg'
+import raduNicolauImg from './radu_nicolau.jpg'
+import raduStochitoiuImg from './radu_stochitoiu.jpg'
+import andreeaGrosuleacImg from './andreea_grosuleac.jpg'
+import teoMileaImg from './teo_milea.jpg'
 
 const persons = {
   main_members: [
@@ -128,6 +136,60 @@ const persons = {
       name: 'Diana Grecu',
       position: 'Member',
       photo: dianaGrecuImg
+    },
+
+    {
+      name: 'Andrei Serițan',
+      position: 'Member',
+      photo: andreiSeritanImg
+    },
+
+    {
+      name: 'Ebru Resul',
+      position: 'Member',
+      photo: ebruResulImg
+    },
+
+    {
+      name: 'Dorin Geman',
+      position: 'Member',
+      photo: dorinGemanImg
+    },
+
+    {
+      name: 'Andra Danciu',
+      position: 'Member',
+      photo: andraDanciuImg
+    },
+
+    {
+      name: 'Darius Neațu',
+      position: 'Member',
+      photo: dariusNeatuImg
+    },
+
+    {
+      name: 'Radu Nicolau',
+      position: 'Member',
+      photo: raduNicolauImg
+    },
+
+    {
+      name: 'Radu Stochițoiu',
+      position: 'Member',
+      photo: raduStochitoiuImg
+    },
+
+    {
+      name: 'Andreea Grosuleac',
+      position: 'Member',
+      photo: andreeaGrosuleacImg
+    },
+
+    {
+      name: 'Teo Milea',
+      position: 'Member',
+      photo: teoMileaImg
     }
   ]
 }
