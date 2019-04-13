@@ -42,21 +42,21 @@ const persons = {
     },
 
     {
-      name: 'Victor Ciurel',
+      name: 'Tudor Cebere',
       position: 'President',
-      photo: victorCiurelImg
+      photo: tudorCebereImg
     },
 
     {
-      name: 'Sergiu Weisz',
+      name: 'Dorin Geman',
       position: 'Vice President',
-      photo: sergiuWeiszImg
+      photo: dorinGemanImg
     },
 
     {
-      name: 'Teodor Ștefu',
+      name: 'Andrei Serițan',
       position: 'Vice President',
-      photo: teodorStefuImg
+      photo: andreiSeritanImg
     }
   ],
   extra_members: [
@@ -91,9 +91,27 @@ const persons = {
     },
 
     {
+      name: 'Victor Ciurel',
+      position: 'Member',
+      photo: victorCiurelImg
+    },
+
+    {
       name: 'Iulian Radu',
       position: 'Member',
       photo: iulianRaduImg
+    },
+
+    {
+      name: 'Sergiu Weisz',
+      position: 'Member',
+      photo: sergiuWeiszImg
+    },
+
+    {
+      name: 'Teodor Ștefu',
+      position: 'Member',
+      photo: teodorStefuImg
     },
 
     {
@@ -121,12 +139,6 @@ const persons = {
     },
 
     {
-      name: 'Tudor Cebere',
-      position: 'Member',
-      photo: tudorCebereImg
-    },
-
-    {
       name: 'Horia Ion',
       position: 'Member',
       photo: horiaIonImg
@@ -139,21 +151,9 @@ const persons = {
     },
 
     {
-      name: 'Andrei Serițan',
-      position: 'Member',
-      photo: andreiSeritanImg
-    },
-
-    {
       name: 'Ebru Resul',
       position: 'Member',
       photo: ebruResulImg
-    },
-
-    {
-      name: 'Dorin Geman',
-      position: 'Member',
-      photo: dorinGemanImg
     },
 
     {
