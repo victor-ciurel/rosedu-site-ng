@@ -9,7 +9,7 @@ export default {
       ' asta. Dacă dorești să ne dai o mână de ajutor, sau ești interesat de un parteneriat, folosește formularul de contact și' +
       ' hai să ne auzim!',
     en:
-      'If you want to support ROSEdu\'s activities, we have several options to do that. ' +
+      "If you want to support ROSEdu's activities, we have several options to do that. " +
       'If you want to give us a helping hand or you are interested in a partnership, use the contact form and ' +
       'let us get in touch with you!'
   },
@@ -38,11 +38,26 @@ export default {
     en: 'Sponsorship'
   },
   sponsorship_content: {
-    ro: 'Dacă dorești să avem un parteneriat de sponsorizare, trimite-ne un mesaj!',
+    ro:
+      'Dacă dorești să avem un parteneriat de sponsorizare, trimite-ne un mesaj!',
     en: 'If you want to have a partnership, send us a message!'
   },
   sponsorship_button: {
     ro: 'Trimite mesaj',
     en: 'Send message'
+  },
+  percent2_title: {
+    ro: '2%',
+    en: ' 2%'
+  },
+  percent2_content: {
+    ro:
+      'Orice ajutor este binevenit ca sa ne putem duce la bun sfarsit proiectele educative!',
+    en:
+      'Any provided help is welcome so that we can complete educational projects!'
+  },
+  percent2_button: {
+    ro: 'Redirectioneaza',
+    en: 'Redirect'
   }
 }
