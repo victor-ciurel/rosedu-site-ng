@@ -99,7 +99,7 @@ class Form extends Component {
         <div className='social'>
           <span>
             <img src={twitter} />
-            @rosedu
+            @rosedu_org
           </span>
           <span>
             <img src={facebook} />
