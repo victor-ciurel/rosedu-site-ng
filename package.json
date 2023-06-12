@@ -6,7 +6,7 @@
     "author": "Bogdan Marius Calapod <bogdan.marius.calapod@outlook.com>",
     "dependencies": {
         "anchorate": "^1.2.3",
-        "gatsby": "^4.25.7",
+        "gatsby": "^5.10.0",
         "gatsby-link": "^1.6.32",
         "gatsby-plugin-google-analytics": "^1.0.14",
         "gatsby-plugin-hotjar": "^1.0.1",
